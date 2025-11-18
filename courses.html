@@ -3,9 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course</title>
+    <title>StuTIcs — Courses</title>
+    <link rel="stylesheet" href="courses.css">
 </head>
 <body>
-    
+
+<!-- Floating Abstract Background Shapes -->
+<div class="bg-shape bg1"></div>
+<div class="bg-shape bg2"></div>
+<div class="bg-shape bg3"></div>
+
+<header class="navbar">
+    <div class="nav-left">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" class="nav-logo">
+    </div>
+
+    <nav class="nav-center">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item active">Courses</a>
+        <a href="#" class="nav-item">Discussion Forums</a>
+    </nav>
+</header>
+
+<section class="courses-header fade-in">
+    <h1>Explore Your Learning Path</h1>
+    <p>Choose a class and continue your journey.</p>
+
+    <div class="search-box">
+    <input type="text" placeholder="Search courses..." />
+    <button class="search-btn">
+        🔍
+    </button>
+</div>
+
+
+    <div class="category-filter">
+        <button class="filter active">All</button>
+        <button class="filter">Software</button>
+        <button class="filter">Network</button>
+        <button class="filter">Data</button>
+        <button class="filter">Cyber</button>
+        <button class="filter">UI/UX</button>
+        <button class="filter">AI</button>
+    </div>
+</section>
+
+<section class="trending-section fade-in">
+    <h2 class="section-title">🔥 Trending Now</h2>
+
+    <div class="trending-list">
+        <span class="trend">AI Fundamentals</span>
+        <span class="trend">Networking 101</span>
+        <span class="trend">Python Basics</span>
+        <span class="trend">Cybersecurity Intro</span>
+    </div>
+</section>
+
+<section class="continue-section fade-in">
+    <h2 class="section-title">📘 Continue Learning</h2>
+
+    <div class="continue-card">
+        <div>
+            <h3>Software Engineer — Lesson 4/12</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 34%;"></div>
+            </div>
+        </div>
+        <button class="continue-btn">Continue</button>
+    </div>
+</section>
+
+<section class="courses-section fade-in">
+    <h2 class="section-title">Most Popular</h2>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <div class="course-banner">
+                <img src="https://img.freepik.com/premium-vector/young-software-engineer-types-laptop-with-various-tech-icons-tools-displayed-around-him-software-engineer-customizable-cartoon-illustration_538213-143334.jpg">
+            </div>
+            <div class="course-content">
+                <span class="tag software">Software</span>
+                <span class="course-code">SE-101</span>
+                <h3 class="course-title">Software Engineer</h3>
+                <p class="course-desc">12 lessons</p>
+                <button class="view-btn">View Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-banner">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.h4_KATkTuhXap4Jj2Mi76wHaE8?pid=Api&P=0&h=220">
+            </div>
+            <div class="course-content">
+                <span class="tag network">Network</span>
+                <span class="course-code">NE-102</span>
+                <h3 class="course-title">Network Engineer</h3>
+                <p class="course-desc">10 lessons</p>
+                <button class="view-btn">View Course</button>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <div class="course-banner">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.3ufupLGezn9zQ-N27c8yiwAAAA?pid=Api&P=0&h=220">
+            </div>
+            <div class="course-content">
+                <span class="tag data">Data</span>
+                <span class="course-code">DS-103</span>
+                <h3 class="course-title">Data Science</h3>
+                <p class="course-desc">14 lessons</p>
+                <button class="view-btn">View Course</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2025 StuTIcs — Learn Smart. Learn Easy.</p>
+    <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+    </div>
+</footer>
+
 </body>
 </html>

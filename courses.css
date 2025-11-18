@@ -1,0 +1,440 @@
+/* =============================
+   GLOBAL THEME
+============================= */
+:root {
+    --text: #111;
+    --muted: #5c5c5c;
+    --primary: #5b2dff;
+    --radius: 18px;
+    --max-width: 1180px;
+
+    --soft-shadow: 0 4px 14px rgba(0,0,0,0.13);
+    --soft-shadow-big: 0 10px 26px rgba(0,0,0,0.17);
+}
+
+body {
+    margin: 0;
+    font-family: 'Garet', Arial, sans-serif;
+    background: linear-gradient(135deg, #efe5ff, #e3d4ff, #d9cdef, #dacbff, #ffdfff, #ffe8ff);
+    background-size: 300% 300%;
+    animation: bgMove 18s ease infinite;
+    overflow-x: hidden;
+}
+
+/* Background gradient animation */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* =============================
+   FLOATING BLOB SHAPES
+============================= */
+.bg-shape {
+    position: fixed;
+    filter: blur(70px);
+    opacity: 0.55;
+    z-index: -10;
+    border-radius: 50%;
+}
+
+.bg1 {
+    width: 380px;
+    height: 380px;
+    background: #c09bff;
+    top: -80px;
+    left: -40px;
+}
+
+.bg2 {
+    width: 420px;
+    height: 420px;
+    background: #ffafff;
+    bottom: 0;
+    right: -80px;
+}
+
+.bg3 {
+    width: 350px;
+    height: 350px;
+    background: #9bb1ff;
+    top: 40%;
+    left: -120px;
+}
+
+
+
+/* =============================
+   ANIMATIONS
+============================= */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* =============================
+   NAVBAR
+============================= */
+.navbar {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.nav-logo {
+    height: 50px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-item {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-item:hover { background: rgba(161,138,199,0.35); }
+.nav-item.active { background: #a18ac7; color: white; }
+
+
+
+/* =============================
+   HEADER
+============================= */
+.courses-header {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.courses-header h1 {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.courses-header p {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+
+
+/* SEARCH BOX WRAPPER */
+.search-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* biar center */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* INPUT */
+.search-box input {
+    width: 100%;
+    padding: 14px 20px;
+    padding-right: 55px; /* ruang untuk icon */
+    font-size: 16px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+}
+
+.search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent; /* NO BACKGROUND */
+    color: var(--muted); /* warna icon biar soft */
+    border: none;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s ease;
+}
+
+/* Hover biar keliatan interaktif */
+.search-btn:hover {
+    color: var(--primary); 
+}
+
+
+/* CATEGORY FILTER */
+.category-filter {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    transition: 0.2s;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--primary);
+    color: white;
+}
+
+
+
+/* =============================
+   TRENDING SECTION
+============================= */
+.trending-section {
+    max-width: var(--max-width);
+    margin: 10px auto 40px;
+    padding: 0 20px;
+}
+
+.trending-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.trend {
+    background: white;
+    padding: 8px 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    color: #444;
+    box-shadow: var(--soft-shadow);
+}
+
+
+
+/* =============================
+   CONTINUE LEARNING
+============================= */
+.continue-section {
+    max-width: var(--max-width);
+    padding: 0 20px;
+    margin: 30px auto 50px;
+}
+
+.continue-card {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--soft-shadow-big);
+}
+
+.progress-bar {
+    width: 260px;
+    height: 8px;
+    background: #e0d8ff;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+.continue-btn {
+    padding: 10px 18px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.continue-btn:hover {
+    background: #4420d6;
+}
+
+
+
+/* =============================
+   COURSE LIST
+============================= */
+.courses-section {
+    max-width: var(--max-width);
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+
+
+/* GRID */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+
+
+/* CARD */
+.course-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--soft-shadow-big);
+}
+
+
+
+/* TAGS */
+.tag {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.tag.software { background: #5b2dff; }
+.tag.network { background: #ff7a5c; }
+.tag.data { background: #5ccf9b; }
+
+
+
+/* COURSE BANNER IMAGE */
+.course-banner {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.course-banner img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+
+
+/* CONTENT */
+.course-content {
+    padding: 18px;
+}
+
+.course-code {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.course-title {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.course-desc {
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+
+
+/* BUTTON */
+.view-btn {
+    width: 100%;
+    padding: 12px 0;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.view-btn:hover {
+    background: #4420d6;
+    transform: translateY(-2px);
+}
+
+
+
+/* =============================
+   FOOTER
+============================= */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #555;
+    margin-top: 60px;
+}
+
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+}
+
