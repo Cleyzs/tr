@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background: #f7f3ff; /* ungu pastel muda */
+}
+
+/* HEADER */
+root {
+    --bg: #ffffff;
+    --text: #111111;
+    --muted: #5c5c5c;
+    --card: #ffffff;
+    --primary: #5b2dff;
+    --radius: 18px;
+    --max-width: 1150px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Garet', Arial, sans-serif;
+    background: #d9cdef;
+    overflow-x: hidden; /* supaya gak geser */
+}
+
+.navbar {
+    width: 100%;
+    padding: 16px 20px; /* lebih kecil, kiri-kanan */
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    overflow: hidden; /* mencegah grid meluber */
+}
+
+.nav-logo {
+    height: 48px;
+}
+
+/* Center Menu - agar item sejajar */
+.nav-center {
+    display: flex;
+    align-items: center;  /* ini yang bikin rata tengah vertikal */
+    gap: 35px;
+    justify-content: center;
+}
+
+.nav-item {
+    font-family: 'Garet', sans-serif;
+    color: black;
+    text-decoration: none;     /* hilangkan underline */
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 10px;       /* biar efek pencet keliatan halus */
+    transition: 0.2s ease;     /* animasi halus */
+}
+
+/* Efek hover (sedikit gelap) */
+.nav-item:hover {
+    background: rgba(161, 138, 199, 0.25);
+}
+
+/* Efek klik (lebih gelap dan cepat) */
+.nav-item:active {
+    background: rgba(161, 138, 199, 0.45);
+    transform: scale(0.97);
+}
+
+/* Active tetap seperti sebelumnya */
+.nav-item.active {
+    background: #a18ac7;
+    color: white;
+    font-weight: 700;
+}
+
+
+/* Right section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;            /* sedikit dilebarkan biar lega */
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+/* Avatar lebih besar */
+.avatar {
+    width: 48px;
+    height: 48px;
+    background: #d6dbe4;
+    border-radius: 50%;
+    position: relative;
+}
+
+.avatar-img {
+    width: 52px;    /* lebih besar dari sebelumnya */
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover; /* supaya foto tidak gepeng */
+}
+
+/* Kepala + badan disesuaikan ukuran baru */
+.avatar::before {
+    width: 14px;
+    height: 14px;
+    top: 8px;
+    left: 17px;
+}
+
+.avatar::after {
+    width: 22px;
+    height: 12px;
+    bottom: 8px;
+    left: 13px;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icon {
+    width: 45px;
+}
+
+.header-box h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header-box p {
+    margin: 0;
+    color: #555;
+}
+
+/* SEARCH AREA */
+.top-controls {
+    display: flex;
+    gap: 10px;
+    padding: 20px 40px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbbaff;
+}
+
+.select-module {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbbaff;
+}
+
+.filter-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #cbbaff;
+    cursor: pointer;
+}
+
+/* HEADER DISKUSI */
+.discussion-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.create-btn {
+    background: #4d3bb3;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* CARD DISKUSI */
+.discussion-card {
+    background: white;
+    margin: 20px 40px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ded0ff;
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    background: #b09dff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon.red {
+    background: #ff6b6b;
+}
+
+.profile-icon.green {
+    background: #28d462;
+}
+.status-done {
+    margin-left: auto;
+    background: #c6ffc6;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.desc {
+    color: #444;
+}
+
+.tags span {
+    background: #ebe3ff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.bottom-row {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
