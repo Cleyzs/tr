@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    font-family: "Arial", sans-serif;
-    background: #f7f3ff; /* ungu pastel muda */
+    font-family: 'Garet', Arial, sans-serif;
+    background: #d9cdef;
+    overflow-x: hidden;
 }
 
-/* HEADER */
 root {
     --bg: #ffffff;
     --text: #111111;
@@ -15,147 +15,67 @@ root {
     --max-width: 1150px;
 }
 
-body {
-    margin: 0;
-    font-family: 'Garet', Arial, sans-serif;
-    background: #d9cdef;
-    overflow-x: hidden; /* supaya gak geser */
-}
-
+/* NAVBAR */
 .navbar {
     width: 100%;
-    padding: 16px 20px; /* lebih kecil, kiri-kanan */
+    padding: 16px 20px;
     background: white;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    overflow: hidden; /* mencegah grid meluber */
 }
 
 .nav-logo {
     height: 48px;
 }
 
-/* Center Menu - agar item sejajar */
 .nav-center {
     display: flex;
-    align-items: center;  /* ini yang bikin rata tengah vertikal */
+    align-items: center;
     gap: 35px;
     justify-content: center;
 }
 
 .nav-item {
-    font-family: 'Garet', sans-serif;
     color: black;
-    text-decoration: none;     /* hilangkan underline */
+    text-decoration: none;
     font-size: 17px;
     font-weight: 600;
-    line-height: 1;
-    display: flex;
-    align-items: center;
     padding: 8px 14px;
-    border-radius: 10px;       /* biar efek pencet keliatan halus */
-    transition: 0.2s ease;     /* animasi halus */
+    border-radius: 10px;
+    transition: 0.2s ease;
 }
 
-/* Efek hover (sedikit gelap) */
 .nav-item:hover {
     background: rgba(161, 138, 199, 0.25);
 }
 
-/* Efek klik (lebih gelap dan cepat) */
 .nav-item:active {
     background: rgba(161, 138, 199, 0.45);
     transform: scale(0.97);
 }
 
-/* Active tetap seperti sebelumnya */
 .nav-item.active {
     background: #a18ac7;
     color: white;
-    font-weight: 700;
 }
 
-
-/* Right section */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;            /* sedikit dilebarkan biar lega */
-    justify-content: flex-end;
-    padding-right: 40px;
-}
-
-/* Avatar lebih besar */
-.avatar {
-    width: 48px;
-    height: 48px;
-    background: #d6dbe4;
-    border-radius: 50%;
-    position: relative;
-}
-
-.avatar-img {
-    width: 52px;    /* lebih besar dari sebelumnya */
-    height: 52px;
-    border-radius: 50%;
-    object-fit: cover; /* supaya foto tidak gepeng */
-}
-
-/* Kepala + badan disesuaikan ukuran baru */
-.avatar::before {
-    width: 14px;
-    height: 14px;
-    top: 8px;
-    left: 17px;
-}
-
-.avatar::after {
-    width: 22px;
-    height: 12px;
-    bottom: 8px;
-    left: 13px;
-}
-
-
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-icon {
-    width: 45px;
-}
-
-.header-box h2 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.header-box p {
-    margin: 0;
-    color: #555;
-}
-
-/* SEARCH AREA */
+/* TOP CONTROLS */
 .top-controls {
     display: flex;
     gap: 10px;
     padding: 20px 40px;
 }
 
-.search-input {
-    flex: 1;
+.search-input,
+.select-module {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #cbbaff;
 }
 
-.select-module {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #cbbaff;
+.search-input {
+    flex: 1;
 }
 
 .filter-btn {
@@ -166,12 +86,61 @@ body {
     cursor: pointer;
 }
 
+/* LAYOUT WRAPPER */
+.layout-container {
+    display: grid;
+    grid-template-columns: 260px auto;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    height: fit-content;
+    border: 1px solid #ded0ff;
+}
+
+.side-title {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.trending-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.trending-list li {
+    background: #f0e7ff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.trending-list li:hover {
+    background: #dec9ff;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    width: 100%;
+}
+
 /* HEADER DISKUSI */
 .discussion-header {
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 0;
     align-items: center;
+    margin-top: 10px;
 }
 
 .create-btn {
@@ -186,7 +155,7 @@ body {
 /* CARD DISKUSI */
 .discussion-card {
     background: white;
-    margin: 20px 40px;
+    margin: 20px 0;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #ded0ff;
@@ -196,6 +165,26 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/* BADGES */
+.badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: white;
+}
+
+.gold {
+    background: #d4af37;
+}
+
+.silver {
+    background: #a8a8a8;
+}
+
+.bronze {
+    background: #c6813f;
 }
 
 .profile-icon {
@@ -216,6 +205,7 @@ body {
 .profile-icon.green {
     background: #28d462;
 }
+
 .status-done {
     margin-left: auto;
     background: #c6ffc6;
@@ -248,6 +238,7 @@ h3 {
     font-size: 14px;
 }
 
+/* ANIMASI */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -259,4 +250,39 @@ h3 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .main-content {
+        order: 1;
+    }
+}
+
+.category-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.category-list li {
+    background: #f4eaff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-list li:hover {
+    background: #d9c8ff;
 }
