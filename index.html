@@ -1,39 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GWEN BADEG</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center; /* Mengatur teks di tengah secara horizontal */
-      align-items: center; /* Mengatur teks di tengah secara vertikal */
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuTIcs</title>
 
-    h1 {
-      color: white;
-      font-size: 3em;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-      animation: glow 2s ease-in-out infinite alternate;
-    }
+    <!-- FONT -->
+    <link href="HELIOS-EXTENDED-LINK" rel="stylesheet">
+    <link href="GARET-FONT-LINK" rel="stylesheet">
 
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #ffb6b9, 0 0 30px #ffb6b9;
-      }
-      to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff9a9e, 0 0 40px #ff9a9e;
-      }
-    }
-  </style>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <h1>GWEN BADEG POOOLLLLL</h1>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-left">
+    <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" alt="StuTIcs Logo" class="nav-logo">
+        </div>
+        <nav class="nav-menu">
+            <button href="#" class="login-btn">Log In</button>
+            <button href="#" class="signup-btn">Sign Up</button>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <span class="tag">For Courses Online</span>
+                <h1 data-text="Level Up Your<br>Tech Skill">Level Up Your<br>Tech Skill</h1>
+                <p>Temukan kursus yang tepat dan mulai belajar dengan cara yang lebih terarah dipandu oleh proyek nyata dan mentor berpengalaman.</p>
+                <a href="#what-you-will-learn" class="btn-primary">Explore More ↗</a>
+            </div>
+
+            <div class="hero-img">
+                <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/boneka_coding.png" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU WILL LEARN -->
+<section class="learn-section" id="what-you-will-learn">
+    <h2 class="learn-title">What You Will Learn In The Course?</h2>
+
+    <div class="learn-grid">
+
+        <div class="learn-card">
+            <img class="icon-img" 
+                src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/software_engineering.png" 
+                alt="Software Engineering">
+            <h3>Software Engineering</h3>
+            <p>Belajar membangun aplikasi dari dasar pemrograman hingga pengembangan web modern.</p>
+        </div>
+
+        <div class="learn-card">
+            <img class="icon-img" 
+                src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/network_engineering.png" 
+                alt="Network Engineering">
+            <h3>Network Engineering</h3>
+            <p>Mempelajari cara merancang, mengelola, dan mengamankan jaringan komputer.</p>
+        </div>
+
+        <div class="learn-card">
+            <img class="icon-img" 
+                src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/data_science%20(1).png" 
+                alt="Data Science">
+            <h3>Data Science</h3>
+            <p>Mengenal pengolahan data, SQL, dan analisis untuk memperoleh insight yang bermakna.</p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- MENTORS -->
+<section class="mentor-section">
+    <h2 class="mentor-title">Meet Our Expert Mentors</h2>
+
+    <div class="mentor-wrapper">
+        <!-- GRID HANYA 3 CARD AWAL -->
+        <div class="mentor-grid">
+
+            <!-- Card 1 -->
+            <div class="mentor-card">
+                <div class="mentor-img">
+                    <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/mentor_1.png" alt="Mentor 1">
+                </div>
+                <h3>Dr. Andika Pratama</h3>
+                <p>Software Engineering</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="mentor-card">
+                <div class="mentor-img">
+                    <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/mentor_2.png" alt="Mentor 2">
+                </div>
+                <h3>Rendra Wirawan, CCNA, CEH</h3>
+                <p>Network Engineering</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="mentor-card">
+                <div class="mentor-img">
+                    <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/mentor_3.png" alt="Mentor 3">
+                </div>
+                <h3>Maya Lestari, M.Sc.</h3>
+                <p>Data Science</p>
+            </div>
+
+        </div>
+        <!-- END GRID -->
+    </div>
+
+    <div class="more-mentors">
+        <h3>and many more....</h3>
+    </div>
+</section>
+
+    <!-- COURSES -->
+    <section class="courses-section">
+    <div class="image-left">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/courses.png" alt="Course Placeholder">
+    </div>
+    <div class="content-right">
+        <h2 class="section-title">Courses</h2>
+        <p class="section-desc">Akses ratusan course dan latihan interaktif dalam tiga path pembelajaran: Software Engineering, Data Science, dan Network Engineering. Pelajari skill yang benar-benar relevan, membuat proyek nyata, dan bangun portofolio sejak hari pertama melalui bukti sertifikat.</p>
+        <a href="sign_up.html" class="btn-secondary">Learn More ↗</a>
+    </div>
+    </section>
+
+    <!-- FORUM -->
+    <section class="forum-section">
+    <div class="content-left">
+        <h2 class="section-title">Discussion Forums</h2>
+        <p class="section-desc">Kembangkan pemahaman lewat tanya jawab, brainstorming, dan sharing pengalaman nyata dari komunitas. Diskusikan bug, konsep, algoritma, atau topik apa pun di dalam track yang kamu pelajari. Semua dalam satu ruang belajar kolaboratif.</p>
+        <a href="sign_up.html" class="btn-secondary">Learn More ↗</a>
+    </div>
+    <div class="image-right">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/forum_discussion.png" alt="Forum Placeholder">
+    </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonial-section">
+        <h2 class="section-title">What They're Saying</h2>
+
+        <div class="testimonial-grid">
+
+            <!-- TESTIMONI 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+
+                    <!-- FOTO + NAMA -->
+                    <div class="photo-name">
+                        <img class="testimonial-photo" src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/surya.png" alt="">
+                        <h3>Surya</h3>
+                    </div>
+
+                    <!-- BINTANG -->
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+
+                <p>“Materinya runtut dan mudah diikuti, terutama buat pemula yang baru belajar coding. Latihan praktiknya benar-benar membantu memahami konsep.”</p>
+            </div>
+
+            <!-- TESTIMONI 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <div class="photo-name">
+                        <img class="testimonial-photo" src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/michelle.png" alt="">
+                        <h3>Michelle</h3>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+                <p>“Belajar di sini terasa seperti punya mentor pribadi. Forumnya aktif, dan aku sering dapat jawaban cepat setiap kali bingung.”</p>
+            </div>
+
+            <!-- TESTIMONI 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <div class="photo-name">
+                        <img class="testimonial-photo" src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/nadira.png" alt="">
+                        <h3>Nadira</h3>
+                    </div>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+                <p>“Platformnya rapi dan nyaman dipakai. Aku paling suka bagian Network Engineering karena penjelasannya to the point dan langsung aplikatif.”</p>
+            </div>
+
+            <!-- TESTIMONI 4 -->
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <div class="photo-name">
+                        <img class="testimonial-photo" src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/bagas.png" alt="">
+                        <h3>Bagas</h3>
+                    </div>
+                    <div class="testimonial-stars">★★★★☆</div>
+                </div>
+                <p>“Course Data Science-nya jelas dan tidak membingungkan, apalagi latihan SQL-nya. Kalau ada lebih banyak proyek real-world, pasti makin mantap.”</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT US -->
+<section class="about-section">
+    <div class="about-inner">
+        
+        <h2 class="section-title">About Us</h2>
+
+        <!-- Tombol sekarang di sini, antara judul dan gambar -->
+        <a href="about_us.html" class="btn-secondary">Know More ↗</a>
+
+        <div class="section-placeholder">
+            <div class="about-img-wrapper">
+                <img class="about-img"
+                    src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/about_us.png"
+                    alt="About Placeholder">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+    <p class="copy">© 2025 All Rights Reserved</p>
+
+    <div class="right-footer">
+        <p class="connect">Let's Connect With Our Group Project</p>
+
+        <!-- Tambahkan link GitHub di sini -->
+        <a href="https://github.com/Cleyzs/tr" target="_blank" class="github-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+    </div>
+</footer>
+
 </body>
 </html>
