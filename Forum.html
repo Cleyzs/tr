@@ -1,136 +1,179 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum Diskusi</title>
-    <link rel="stylesheet" href="Forum.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StuTics Forum</title>
+  <link rel="stylesheet" href="Forum.css">
 </head>
-<body>
+<body class="page-ready">
 
-<header class="navbar">
+  <!-- =========================
+       THEME CONTROLS (radio-only)
+       Two radios placed before the page so CSS sibling selectors work
+       ========================= -->
+  <input type="radio" name="theme" id="themeLight" checked class="theme-radio">
+  <input type="radio" name="theme" id="themeDark" class="theme-radio">
+
+  <div class="theme-switcher">
+    <label for="themeLight" class="label-sun" title="Light mode">🌞</label>
+    <label for="themeDark"  class="label-moon" title="Dark mode">🌙</label>
+  </div>
+
+  <!-- =========================
+       HEADER / NAVBAR
+       ========================= -->
+  <header class="navbar">
     <div class="nav-left">
-        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" class="nav-logo">
+      <img src="Assets/Home Page/Logo_StuTics.png" alt="Logo StuTics" class="nav-logo">
+      <div class="brand">
+    
+      </div>
     </div>
 
-    <nav class="nav-center">
-        <a href="#" class="nav-item">Home</a>
-        <a href="courses.html" class="nav-item">Courses</a>
-        <a href="#" class="nav-item active">Discussion Forums</a>
+    <nav class="nav-center" aria-label="Main navigation">
+      <a href="Profil.html" class="nav-item">Home</a>
+      <a href="courses.html" class="nav-item">Courses</a>
+      <a href="#" class="nav-item active">Discussions</a>
     </nav>
-</header>
 
-<div class="top-controls fade-in">
-    <input type="text" class="search-input" placeholder="Look for the discussion title">
-    
-    <select class="select-module">
-        <option>Select Menu</option>
-        <option>Menu 1</option>
-        <option>Menu 2</option>
+    <div class="nav-right">
+      <!-- visual placeholders; theme radio controls above actually change theme -->
+      
+    </div>
+  </header>
+
+  <!-- =========================
+       CONTROLS (search / select / filter)
+       ========================= -->
+  <section class="controls">
+    <div class="search-wrap">
+      <input class="search" type="text" placeholder="Cari judul diskusi" aria-label="Cari">
+      <span class="search-ico" aria-hidden>🔍</span>
+    </div>
+
+    <select class="select-mod" aria-label="Pilih kategori">
+      <option>Semua Kategori</option>
+      <option>HTML & CSS</option>
+      <option>IoT</option>
+      <option>Networking</option>
     </select>
 
-    <button class="filter-btn">Filter ⚙</button>
-</div>
+    <a class="filter" href="#" role="button">⚙️ Filter</a>
+  </section>
 
-<div class="layout-container">
+  <!-- =========================
+       LAYOUT (sidebar + content)
+       ========================= -->
+  <div class="layout">
 
-    <aside class="sidebar fade-in">
-
-        <h3 class="side-title">🔥 Trending Topics</h3>
-        <ul class="trending-list">
-            <li>#iot jaringan sensor</li>
-            <li>#css responsive layout</li>
-            <li>#pemula html latihan</li>
-            <li>#networking dasar</li>
-            <li>#project web design</li>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="panel panel-trending">
+        <h4>🔥 Trending</h4>
+        <ul class="list">
+          <li class="trend-item">#neon-ui</li>
+          <li class="trend-item">#responsive</li>
+          <li class="trend-item">#pemula-html</li>
+          <li class="trend-item">#iot-id</li>
         </ul>
+      </div>
 
-        <h3 class="side-title" style="margin-top: 25px;">📂 Categories</h3>
-        <ul class="category-list">
-            <li>General Discussion</li>
-            <li>HTML & CSS</li>
-            <li>IoT & Networking</li>
-            <li>School & College</li>
-            <li>Programming Basics</li>
-            <li>Q&A Corner</li>
+      <div class="panel panel-categories">
+        <h4>📂 Kategori</h4>
+        <ul class="list">
+          <li class="cat-item">General</li>
+          <li class="cat-item">Web Dev</li>
+          <li class="cat-item">IoT</li>
+          <li class="cat-item">Networking</li>
         </ul>
-
+      </div>
     </aside>
 
-    <main class="main-content">
+    <!-- MAIN CONTENT -->
+    <main class="content" role="main">
+      <div class="header-main">
+        <h1 class="title-gradient">Explore Discussions</h1>
+        <a class="btn-create" href="#" role="button">➕ Create</a>
+      </div>
 
-        <div class="discussion-header fade-in">
-            <p>Discussion based on: <b>All Discussions</b></p>
-            <button class="create-btn">Create a new discussion</button>
+      <!-- CARD 1 -->
+      <article class="card">
+        <span class="badge gold">Top</span>
+        <div class="holo-pop"></div>
+
+        <div class="card-top">
+          <div class="avatar holo">S</div>
+          <div class="meta">
+            <div class="user">Stutics Reviewer</div>
+            <div class="time">• 2y ago</div>
+          </div>
         </div>
 
-        <div class="discussion-card fade-in">
-            <div class="top-row">
-                <div class="profile-icon">G</div>
-                <p class="info"><b>Stutitcs Reviewer</b> • 2 years ago</p>
-                <span class="badge gold">⭐ Top Contributor</span>
-                <span class="status-done">DONE</span>
-            </div>
+        <h2 class="card-title">Halo! Perkenalkan dirimu di sini</h2>
+        <p class="card-desc">Tempat untuk saling kenal dan berbagi pengalaman belajar.</p>
 
-            <h3>Halo! Selamat datang dan silakan perkenalkan diri kamu</h3>
-            <p class="desc">Bagaimana kabarmu? Semoga baik-baik saja ya. Sekali lagi saya ucapkan selamat datang semuanya...</p>
-
-            <div class="tags">
-                <span>#perkenalan</span>
-            </div>
-
-            <div class="bottom-row">
-                <span class="meta">💬 6271 Discussion</span>
-                <span class="meta">📂 Forum Discussion</span>
-            </div>
+        <div class="card-tags">
+          <span class="tag">#perkenalan</span>
+          <span class="tag">#welcome</span>
         </div>
 
-        <div class="discussion-card fade-in">
-            <div class="top-row">
-                <div class="profile-icon red">K</div>
-                <p class="info"><b>Arwin</b> • 15 hours ago</p>
-                <span class="badge silver">🔥 Active Member</span>
-            </div>
+        <div class="card-foot">💬 6271 • 📂 General</div>
+      </article>
 
-            <h3>Arsitektur Jaringan IoT dan Tantangannya di Indonesia</h3>
-            <p class="desc"></p>
+      <!-- CARD 2 -->
+      <article class="card">
+        <span class="badge silver">Active</span>
+        <div class="holo-pop"></div>
 
-            <div class="tags">
-                <span>#network</span>
-                <span>#iot</span>
-                <span>#jaringan</span>
-            </div>
-
-            <div class="bottom-row">
-                <span class="meta">💬 273 Discussion</span>
-                <span class="meta">📂 IOT Discussion</span>
-            </div>
+        <div class="card-top">
+          <div class="avatar holo">K</div>
+          <div class="meta">
+            <div class="user">Arwin</div>
+            <div class="time">• 15h ago</div>
+          </div>
         </div>
 
-        <div class="discussion-card fade-in">
-            <div class="top-row">
-                <div class="profile-icon green">C</div>
-                <p class="info"><b>Clemens</b> • 3 hours ago</p>
-                <span class="badge bronze">✨ New Member</span>
-            </div>
+        <h2 class="card-title">Arsitektur IoT & Tantangan di Indonesia</h2>
+        <p class="card-desc">Diskusi mengenai infrastruktur dan keamanan IoT.</p>
 
-            <h3>Pembuatan HTML Memakai CSS</h3>
-            <p class="desc">Belajar mengenali HTML dan CSS</p>
-
-            <div class="tags">
-                <span>#css</span>
-                <span>#html</span>
-            </div>
-
-            <div class="bottom-row">
-                <span class="meta">💬 105 Discussion</span>
-                <span class="meta">📂 How to make HTML & CSS</span>
-            </div>
+        <div class="card-tags">
+          <span class="tag">#iot</span>
+          <span class="tag">#network</span>
         </div>
+
+        <div class="card-foot">💬 273 • 📂 IoT</div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="card">
+        <span class="badge bronze">New</span>
+        <div class="holo-pop"></div>
+
+        <div class="card-top">
+          <div class="avatar holo">C</div>
+          <div class="meta">
+            <div class="user">Clemens</div>
+            <div class="time">• 3h ago</div>
+          </div>
+        </div>
+
+        <h2 class="card-title">Mengenal HTML & CSS untuk Pemula</h2>
+        <p class="card-desc">Panduan singkat untuk mulai membuat halaman web.</p>
+
+        <div class="card-tags">
+          <span class="tag">#html</span>
+          <span class="tag">#css</span>
+        </div>
+
+        <div class="card-foot">💬 105 • 📂 Web Dev</div>
+      </article>
 
     </main>
+  </div>
 
-</div>
+  <!-- FLOATING ACTION -->
+  <a class="fab" href="#" aria-label="Buat Diskusi">✨</a>
 
 </body>
 </html>
