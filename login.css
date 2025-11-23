@@ -1,0 +1,165 @@
+/* ======================== */
+/* GLOBAL FIX */
+/* ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f2f4f7;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* ======================== */
+/* FLOATING BACKGROUND SHAPES */
+/* ======================== */
+
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+}
+
+.bg1 {
+    width: 350px;
+    height: 350px;
+    background: #8fc9ff;
+    top: -80px;
+    left: -80px;
+}
+
+.bg2 {
+    width: 300px;
+    height: 300px;
+    background: #ffb3d1;
+    bottom: -70px;
+    right: -50px;
+}
+
+.bg3 {
+    width: 280px;
+    height: 280px;
+    background: #bfa9ff;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* ======================== */
+/* LOGIN CARD */
+/* ======================== */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 420px;
+    max-width: 90%;
+    padding: 35px 28px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    border-radius: 22px;
+    box-shadow: 0px 10px 35px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* ======================== */
+/* TEXT */
+/* ======================== */
+
+.title {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* ======================== */
+/* INPUT FORMS */
+/* ======================== */
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+    color: #444;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.15s ease;
+    background: #fff;
+    max-width: 100%;
+    display: block;
+}
+
+.input-group input:focus {
+    border-color: #4a74ff;
+    box-shadow: 0 0 4px rgba(74, 116, 255, 0.35);
+}
+
+/* ======================== */
+/* BUTTON */
+/* ======================== */
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #4a74ff;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.login-btn:hover {
+    background: #3a5ee0;
+}
+
+/* ======================== */
+/* LINK */
+/* ======================== */
+
+.link-text {
+    font-size: 14px;
+    color: #444;
+}
+
+.link-text a {
+    color: #4a74ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-text a:hover {
+    text-decoration: underline;
+}
