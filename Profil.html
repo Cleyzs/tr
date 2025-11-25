@@ -1,179 +1,173 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Dashboard — Super Mirip (HTML + CSS)</title>
-<link rel="stylesheet" href="Profil.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StuTIcs - Profil</title>
+  <link rel="stylesheet" href="Profil.css" />
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="brand-wrap">
-      <div class="brand-box">ST</div>
-      <div class="brand-name">StuTics</div>
-      <nav class="navlinks" aria-label="Main">
-        <a class="active" href="#">Home</a>
-        <a href="#">Courses</a>
-        <a href="#">Forums</a>
-      </nav>
+  <!-- BLOBS BACKGROUND -->
+  <div class="bg-shape bg1"></div>
+  <div class="bg-shape bg2"></div>
+  <div class="bg-shape bg3"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img 
+        src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" 
+        class="nav-logo" 
+        alt="StuTIcs Logo"
+      >
     </div>
 
-    <div class="top-actions">
-      <div class="chip">Ongoing Courses</div>
-      <div class="avatar">A</div>
-      <button class="btn-logout">Log Out</button>
+    <nav class="nav-center">
+      <a href="#" class="nav-item active">Home</a>
+      <a href="#" class="nav-item">Courses</a>
+      <a href="#" class="nav-item">Discussion Forums</a>
+    </nav>
+
+    <div class="nav-right">
+      <img 
+        src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg" 
+        alt="Avatar" 
+        class="avatar-img"
+      >
+      <button class="logout-btn">Log Out</button>
     </div>
   </header>
 
-  <div class="container">
+  <!-- MAIN CONTENT -->
+  <main class="page-wrap">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="profile">
-        <div class="photo">AB</div>
-        <div class="profile-txt">
-          <h3>Annette Black</h3>
-          <p class="muted">Product Designer</p>
+    <!-- LEFT PROFILE CARD -->
+    <aside class="profile-card">
+      <div class="profile-top">
+        <div class="avatar-big"></div>
+        <h2>Clemens Vencentio</h2>
+        <p class="muted">Student • Information Technology</p>
+      </div>
+
+      <div class="profile-details">
+
+        <div class="detail-row">
+          <span class="label">Student ID</span>
+          <span class="value">STU-2025001</span>
         </div>
-      </div>
 
-      <div class="stats">
-        <div>
-          <small class="muted">Friends</small>
-          <div class="stat-val">274</div>
+        <div class="detail-row">
+          <span class="label">Email</span>
+          <span class="value">vencentio@example.com</span>
         </div>
-        <div class="chip tiny">Great result!</div>
-      </div>
 
-      <div class="mini-graph" aria-hidden="true">
-        <div class="bar b1"></div>
-        <div class="bar b2"></div>
-        <div class="bar b3"></div>
-        <div class="bar b4"></div>
-        <div class="bar b5"></div>
-        <div class="bar b6"></div>
-      </div>
+        <div class="detail-row">
+          <span class="label">Program</span>
+          <span class="value">Teknik Informatika</span>
+        </div>
 
-      <div class="detail-list">
-        <div class="detail-title">Detailed Information</div>
-        <div class="detail-item"><span>Full Name</span><small>Robert Smith</small></div>
-        <div class="detail-item"><span>Email</span><small>robertsmith84@gmail.com</small></div>
-        <div class="detail-item"><span>Contact</span><small>(555) 555-5674</small></div>
-        <div class="detail-item"><span>Role</span><small>Product Designer</small></div>
+        <div class="detail-row">
+          <span class="label">Semester</span>
+          <span class="value">Semester 1 • 2025</span>
+        </div>
+
       </div>
     </aside>
 
-    <!-- MAIN -->
-    <main class="main">
+    <!-- RIGHT MAIN COLUMN -->
+    <section class="main-column">
 
-      <div class="ongoing">
-        <h4>Ongoing Courses</h4>
-        <div class="controls">
-          <div class="chip">Filter</div>
-          <div class="chip">Sort</div>
+      <!-- ONGOING COURSES -->
+      <section class="courses-section">
+        <h2>Ongoing Courses</h2>
+
+        <div class="courses-row">
+
+          <!-- WEB DESIGNING -->
+          <a href="webdesigning.html" class="course-pill course-web">
+            <header>
+              <span class="pill-title">Web Designing</span>
+              <span class="pill-date">Jan – May 2025</span>
+            </header>
+            <div class="pill-progress">
+              <div class="pill-progress-fill" style="width: 60%;"></div>
+            </div>
+            <div class="pill-meta">Progress: 60% • 8/12 modules</div>
+          </a>
+
+          <!-- MOBILE APP DEVELOPMENT -->
+          <a href="mobileapp.html" class="course-pill course-mobile">
+            <header>
+              <span class="pill-title">Mobile App Development</span>
+              <span class="pill-date">Jan – May 2025</span>
+            </header>
+            <div class="pill-progress">
+              <div class="pill-progress-fill" style="width: 40%;"></div>
+            </div>
+            <div class="pill-meta">Progress: 40% • 5/12 modules</div>
+          </a>
+
+          <!-- DASHBOARD UI/UX -->
+          <a href="dashboard.html" class="course-pill course-dashboard">
+            <header>
+              <span class="pill-title">Dashboard UI/UX</span>
+              <span class="pill-date">Jan – May 2025</span>
+            </header>
+            <div class="pill-progress">
+              <div class="pill-progress-fill" style="width: 25%;"></div>
+            </div>
+            <div class="pill-meta">Progress: 25% • 3/12 modules</div>
+          </a>
+
         </div>
-      </div>
-
-      <!-- COURSES GRID -->
-      <section class="grid">
-        <article class="course c-yellow" style="--p:70%">
-          <div class="meta"><small>Mar 05, 2024</small><div>•</div></div>
-          <h5>Web Designing</h5>
-          <div class="muted">Prototyping</div>
-          <div class="progress"><i></i></div>
-          <div class="note">2 Days Left</div>
-        </article>
-
-        <article class="course c-blue" style="--p:55%">
-          <div class="meta"><small>Mar 08, 2024</small><div>•</div></div>
-          <h5>Mobile App</h5>
-          <div class="muted">Design</div>
-          <div class="progress"><i></i></div>
-          <div class="note">5 Days Left</div>
-        </article>
-
-        <article class="course c-pink" style="--p:25%">
-          <div class="meta"><small>Mar 12, 2024</small><div>•</div></div>
-          <h5>Dashboard</h5>
-          <div class="muted">Wireframe</div>
-          <div class="progress"><i></i></div>
-          <div class="note">8 Days Left</div>
-        </article>
       </section>
 
-      <!-- LOWER: calendar + inbox -->
-      <div class="lower">
-        <section class="cal-card">
-          <h4>Calendar — March</h4>
-          <div class="calendar" role="grid">
-            <!-- small static example -->
-            <div class="cal-day muted">27</div>
-            <div class="cal-day muted">28</div>
-            <div class="cal-day muted">29</div>
-            <div class="cal-day">1</div>
-            <div class="cal-day">2</div>
-            <div class="cal-day">3</div>
-            <div class="cal-day">4</div>
+      <!-- ⭐ INBOX NOTIFICATION SECTION -->
+      <section class="inbox-section">
+        <h2>Inbox</h2>
 
-            <div class="cal-day">5</div>
-            <div class="cal-day">6</div>
-            <div class="cal-day">7</div>
-            <div class="cal-day">8</div>
-            <div class="cal-day">9</div>
-            <div class="cal-day">10</div>
-            <div class="cal-day">11</div>
-
-            <div class="cal-day">12</div>
-            <div class="cal-day">13</div>
-            <div class="cal-day">14</div>
-            <div class="cal-day busy">15</div>
-            <div class="cal-day">16</div>
-            <div class="cal-day">17</div>
-            <div class="cal-day">18</div>
-
-            <div class="cal-day">19</div>
-            <div class="cal-day">20</div>
-            <div class="cal-day">21</div>
-            <div class="cal-day">22</div>
-            <div class="cal-day">23</div>
-            <div class="cal-day">24</div>
-            <div class="cal-day today">25</div>
-          </div>
-        </section>
-
-        <aside class="inbox">
-          <h4>Inbox</h4>
-
-          <div class="msg">
-            <div class="m-avatar av1">WB</div>
-            <div class="m-body">
-              <h5>Web Designing</h5>
-              <p>Hey tell me about progress of project? Waiting for your response.</p>
+        <div class="inbox-card">
+          <div class="inbox-left">
+            <div class="notif-dot"></div>
+            <div>
+              <h3 class="inbox-title">New Assignment Announcement</h3>
+              <p class="inbox-preview">A new assignment has been added in Web Designing...</p>
             </div>
           </div>
 
-          <div class="msg dark">
-            <div class="m-avatar av2">S</div>
-            <div class="m-body">
-              <h5>Stephanie</h5>
-              <p>I got your first assignment, it was quite good ✨</p>
+          <span class="inbox-time">2 hours ago</span>
+        </div>
+
+        <div class="inbox-card">
+          <div class="inbox-left">
+            <div class="notif-dot"></div>
+            <div>
+              <h3 class="inbox-title">Class Update</h3>
+              <p class="inbox-preview">Mobile App class schedule has been updated...</p>
             </div>
           </div>
 
-          <div class="msg">
-            <div class="m-avatar av3">W</div>
-            <div class="m-body">
-              <h5>William</h5>
-              <p>I want some changes in previous work you sent me. Waiting for your reply.</p>
+          <span class="inbox-time">5 hours ago</span>
+        </div>
+
+        <div class="inbox-card">
+          <div class="inbox-left">
+            <div class="notif-dot"></div>
+            <div>
+              <h3 class="inbox-title">Dashboard UI Notice</h3>
+              <p class="inbox-preview">Your lecturer left feedback on your last submission...</p>
             </div>
           </div>
 
-        </aside>
-      </div>
+          <span class="inbox-time">Yesterday</span>
+        </div>
 
-    </main>
-  </div>
+      </section>
+
+    </section>
+
+  </main>
 
 </body>
 </html>

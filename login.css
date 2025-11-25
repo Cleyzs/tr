@@ -1,165 +1,252 @@
-/* ======================== */
-/* GLOBAL FIX */
-/* ======================== */
+/* --- RESET & DASAR --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Garet', Arial, sans-serif; 
 }
 
 body {
-    background: #f2f4f7;
-    overflow: hidden;
-    height: 100vh;
-}
-
-/* ======================== */
-/* FLOATING BACKGROUND SHAPES */
-/* ======================== */
-
-.bg-shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.6;
-}
-
-.bg1 {
-    width: 350px;
-    height: 350px;
-    background: #8fc9ff;
-    top: -80px;
-    left: -80px;
-}
-
-.bg2 {
-    width: 300px;
-    height: 300px;
-    background: #ffb3d1;
-    bottom: -70px;
-    right: -50px;
-}
-
-.bg3 {
-    width: 280px;
-    height: 280px;
-    background: #bfa9ff;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-}
-
-/* ======================== */
-/* LOGIN CARD */
-/* ======================== */
-
-.container {
-    height: 100vh;
+    /* Background Gradasi Pastel (Ungu - Pink - Biru) */
+    background: linear-gradient(135deg, #c09bff, #ffafff, #9bb1ff);
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
-.login-card {
-    width: 420px;
-    max-width: 90%;
-    padding: 35px 28px;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(15px);
-    border-radius: 22px;
-    box-shadow: 0px 10px 35px rgba(0,0,0,0.08);
+/* --- CONTAINER KARTU UTAMA --- */
+.card-container {
+    background-color: #ffffff;
+    width: 1000px;
+    max-width: 95%;
+    height: 650px;
+    border-radius: 40px;
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 15px 35px rgba(100, 100, 200, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden; 
+}
+
+/* --- BAGIAN KIRI (FORM) --- */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
     text-align: center;
 }
 
-/* ======================== */
-/* TEXT */
-/* ======================== */
+/* --- BAGIAN LOGO (DIPERBAIKI) --- */
+.logo-placeholder {
+    /* Menambah margin bawah agar tidak terlalu mepet judul */
+    margin-bottom: 20px; 
+    
+    /* MENAIKKAN LOGO KE ATAS */
+    /* Semakin besar angkanya (misal -50px), semakin naik logonya */
+    margin-top: -40px; 
+    
+    display: flex;
+    justify-content: center;
+}
 
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+/* Judul Utama */
 .title {
     font-size: 28px;
-    margin-bottom: 5px;
     font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Helios Extended', sans-serif; 
 }
 
 .subtitle {
     font-size: 14px;
-    margin-bottom: 25px;
-    color: #666;
+    color: #888;
+    margin-bottom: 30px;
 }
 
-/* ======================== */
-/* INPUT FORMS */
-/* ======================== */
-
+/* Input Fields Wrapper */
 .input-group {
-    text-align: left;
-    margin-bottom: 20px;
     width: 100%;
-}
-
-.input-group label {
-    font-size: 14px;
-    margin-bottom: 6px;
-    display: block;
-    color: #444;
+    max-width: 350px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
 }
 
 .input-group input {
     width: 100%;
-    padding: 14px 16px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+    padding: 15px 45px 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    background-color: #f9f9f9;
     outline: none;
-    transition: 0.15s ease;
-    background: #fff;
-    max-width: 100%;
-    display: block;
+    font-size: 14px;
+    transition: all 0.3s;
 }
 
 .input-group input:focus {
-    border-color: #4a74ff;
-    box-shadow: 0 0 4px rgba(74, 116, 255, 0.35);
+    border-color: #9bb1ff;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(155, 177, 255, 0.2);
 }
 
-/* ======================== */
-/* BUTTON */
-/* ======================== */
+.input-group i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
 
-.login-btn {
+/* Remember & Forgot Password */
+.options {
     width: 100%;
-    padding: 14px;
-    background: #4a74ff;
-    color: #fff;
-    border: none;
-    border-radius: 14px;
-    font-size: 16px;
-    font-weight: 600;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
-    transition: 0.2s ease;
-    margin-bottom: 15px;
 }
 
-.login-btn:hover {
-    background: #3a5ee0;
+.remember-me input {
+    accent-color: #c09bff; 
 }
 
-/* ======================== */
-/* LINK */
-/* ======================== */
-
-.link-text {
-    font-size: 14px;
-    color: #444;
-}
-
-.link-text a {
-    color: #4a74ff;
+.forgot-pass {
+    color: #888;
     text-decoration: none;
     font-weight: 500;
 }
 
-.link-text a:hover {
-    text-decoration: underline;
+.forgot-pass:hover {
+    color: #c09bff;
+}
+
+/* Tombol Login */
+.btn-login {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(to right, #9bb1ff, #c09bff);
+    box-shadow: 0 5px 15px rgba(192, 155, 255, 0.4);
+    transition: transform 0.2s;
+    font-family: 'Helios Extended', sans-serif; 
+}
+
+.btn-login:hover {
+    transform: scale(1.02);
+    background: linear-gradient(to right, #8aa3f5, #b08bf5);
+}
+
+/* Divider "OR" */
+.divider {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #eee;
+}
+.divider span {
+    padding: 0 10px;
+}
+
+/* Social Icons */
+.social-login {
+    display: flex;
+    gap: 20px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #f9f9f9;
+    border-color: #c09bff;
+    color: #c09bff;
+}
+
+/* --- BAGIAN KANAN (GAMBAR) --- */
+.right-section {
+    flex: 1;
+    background-color: #9bb1ff; 
+    
+    background-image: url('https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/boneka_coding.png'); 
+    
+    background-repeat: no-repeat;
+    background-size: 95%;      
+    background-position: center; 
+    
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-section::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(155, 177, 255, 0.2), rgba(192, 155, 255, 0.4));
+    pointer-events: none;
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .left-section {
+        padding: 40px 20px;
+    }
 }
