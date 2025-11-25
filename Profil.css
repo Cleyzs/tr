@@ -1,0 +1,321 @@
+/* ---------------------------------------------------
+   GLOBAL RESET
+--------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f3ff;
+  color: #2b2b2b;
+  overflow-x: hidden;
+}
+
+
+/* ---------------------------------------------------
+   BACKGROUND BLOBS (ANIMATED)
+--------------------------------------------------- */
+.bg-shape {
+  position: fixed;
+  filter: blur(90px);
+  opacity: 0.7;
+  z-index: -10;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.bg1 {
+  width: 350px;
+  height: 350px;
+  background: #b18bff;
+  top: -80px;
+  left: -80px;
+}
+
+.bg2 {
+  width: 400px;
+  height: 400px;
+  background: #d4c1ff;
+  bottom: -100px;
+  right: -50px;
+}
+
+.bg3 {
+  width: 300px;
+  height: 300px;
+  background: #caa5ff;
+  top: 40%;
+  left: 70%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) }
+  100% { transform: translateY(40px) }
+}
+
+
+
+/* ---------------------------------------------------
+   NAVBAR
+--------------------------------------------------- */
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-left .nav-logo {
+  height: 48px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #5f5f6f;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background: #e9dbff;
+  color: #4a3d90;
+}
+
+.nav-item.active {
+  background: #8f6bff;
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logout-btn {
+  background: #8f6bff;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  background: #7e57ff;
+}
+
+
+
+/* ---------------------------------------------------
+   MAIN LAYOUT
+--------------------------------------------------- */
+.page-wrap {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+}
+
+
+
+/* ---------------------------------------------------
+   LEFT PROFILE CARD
+--------------------------------------------------- */
+.profile-card {
+  width: 320px;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.avatar-big {
+  width: 110px;
+  height: 110px;
+  background: #b394ff;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.profile-top h2 {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 22px;
+}
+
+.muted {
+  text-align: center;
+  font-size: 14px;
+  color: #7b7b7b;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.label {
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+.value {
+  font-weight: 500;
+  color: #6d6d6d;
+}
+
+
+
+/* ---------------------------------------------------
+   RIGHT COLUMN
+--------------------------------------------------- */
+.main-column {
+  flex: 1;
+}
+
+.main-column h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+
+
+/* ---------------------------------------------------
+   COURSE PILLS
+--------------------------------------------------- */
+.courses-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course-pill {
+  display: block;
+  width: 300px;
+  padding: 18px 20px;
+  background: white;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #292929;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+  transition: 0.28s;
+  border-left: 6px solid transparent;
+}
+
+.course-pill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Warna kategori */
+.course-web { border-color: #8f6bff }
+.course-mobile { border-color: #ff9bf1 }
+.course-dashboard { border-color: #70c1ff }
+
+.pill-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pill-date {
+  font-size: 13px;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.pill-progress {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 12px 0 6px;
+  overflow: hidden;
+}
+
+.pill-progress-fill {
+  height: 100%;
+  background: #8f6bff;
+  border-radius: 10px;
+}
+
+.pill-meta {
+  font-size: 14px;
+  color: #616161;
+  font-weight: 600;
+}
+
+
+
+/* ---------------------------------------------------
+   RESPONSIVE MODE
+--------------------------------------------------- */
+@media (max-width: 930px) {
+  .page-wrap {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .profile-card {
+    width: 100%;
+  }
+
+  .courses-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .nav-center {
+    gap: 15px;
+  }
+
+  .page-wrap {
+    padding: 15px;
+  }
+
+  .course-pill {
+    width: 100%;
+  }
+}
