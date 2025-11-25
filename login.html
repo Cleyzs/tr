@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Welcome Back</title>
+    
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="login.css">
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <!-- BAGIAN KIRI: Form -->
+        <div class="left-section">
+            
+            <!-- 1. BAGIAN LOGO -->
+            <div class="logo-container">
+                <!-- Pastikan file 'stutics.png' ada di folder yang sama -->
+                <!-- Jika gambarnya belum ada, akan muncul tulisan alt -->
+                <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" alt="Logo StuTics" class="logo-img">
+            </div>
+
+            <!-- 2. BAGIAN JUDUL -->
+            <div class="text-header">
+                <h2 class="title">Welcome back</h2>
+                <p class="subtitle">Please enter your details.</p>
+            </div>
+
+            <!-- 3. BAGIAN FORM -->
+            <form action="#">
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-regular fa-eye"></i>
+                </div>
+
+                <div class="options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember for 30 days
+                    </label>
+                    <a href="#" class="forgot-pass">Forgot password?</a>
+                </div>
+
+                <button class="btn-login">Login</button>
+            </form>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <div class="social-login">
+                <div class="social-btn"><i class="fa-brands fa-apple"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-google" style="background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;"></i></div>
+                <div class="social-btn"><i class="fa-brands fa-facebook-f" style="color: #1877F2;"></i></div>
+            </div>
+        </div>
+
+        <!-- BAGIAN KANAN: Gambar -->
+        <div class="right-section">
+            <!-- Gambar diatur lewat CSS -->
+        </div>
+
+    </div>
+
+</body>
+</html>

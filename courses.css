@@ -119,8 +119,8 @@ body {
     transition: 0.2s;
 }
 
-.nav-item:hover { background: rgba(161,138,199,0.35); }
-.nav-item.active { background: #a18ac7; color: white; }
+.nav-item:hover { background: rgba(92, 90, 96, 0.35); }
+.nav-item.active { background: #000000; color: white; }
 
 
 
@@ -352,9 +352,9 @@ body {
     margin-bottom: 5px;
 }
 
-.tag.software { background: #5b2dff; }
-.tag.network { background: #ff7a5c; }
-.tag.data { background: #5ccf9b; }
+.tag.software { background: hsl(253, 100%, 82%); }
+.tag.network { background: hsl(253, 100%, 82%); }
+.tag.data { background: hsl(253, 100%, 82%); }
 
 
 

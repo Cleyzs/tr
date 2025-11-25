@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HTML & CSS — HC-109</title>
+  <link rel="stylesheet" href="globalcourses.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html"><img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" class="nav-logo" alt="StuTics logo"></a>
+    </div>
+    <nav class="nav-center">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="courses.html" class="nav-item active">Courses</a>
+      <a href="Forum.html" class="nav-item">Discussion Forums</a>
+    </nav>
+  </header>
+
+  <main class="learning-wrapper" role="main">
+
+    <!-- Left: Learning Steps -->
+    <aside class="learning-steps">
+      <div class="step-card" tabindex="0">
+        <div class="step-title">Langkah 1 — Dasar HTML</div>
+        <div class="step-desc">Struktur halaman, elemen dasar, dan semantic HTML. (10 jam • 8 modul)</div>
+      </div>
+
+      <div class="step-card" tabindex="0">
+        <div class="step-title">Langkah 2 — Dasar CSS</div>
+        <div class="step-desc">Selector, warna, spacing, dan gaya tampilan. (12 jam • 7 modul)</div>
+      </div>
+
+      <div class="step-card" tabindex="0">
+        <div class="step-title">Langkah 3 — Responsive Layout</div>
+        <div class="step-desc">Flexbox, Grid, dan responsive design. (16 jam • 9 modul)</div>
+      </div>
+    </aside>
+
+    <!-- Right: Main Detail Box -->
+    <section class="detail-box" aria-labelledby="course-title">
+      <div style="display:flex;gap:20px;align-items:flex-start;">
+        <img src="https://image.web.id/images/HTML-dan-CSS-Dasar2b07ea5c9ec92f8a.png"
+             alt="HTML & CSS banner"
+             style="width:320px;height:200px;object-fit:cover;border-radius:12px;box-shadow:var(--soft-shadow);">
+
+        <div style="flex:1;">
+          <h1 id="course-title" class="detail-title">HTML & CSS — HC-109</h1>
+          <div style="margin-top:6px;color:var(--muted);font-weight:600;">👥 7.1k students • ⭐ 4.9 • Beginner Friendly</div>
+          <p class="detail-text">
+            Kursus ini mengajarkan dasar-dasar pembuatan website menggunakan HTML & CSS.
+            Kamu akan mempelajari cara menyusun struktur halaman dengan benar, mempercantik
+            tampilan menggunakan CSS, serta membuat layout modern yang responsif.
+          </p>
+
+          <div style="margin-top:18px;display:flex;gap:12px;">
+            <a href="#" class="start-btn">Mulai Belajar</a>
+            <a href="#" class="start-btn outline">Lihat Silabus</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Path Section -->
+      <div id="learning-path" style="margin-top:28px;">
+        <h2 class="section-title">Learning Path</h2>
+        <ol style="margin-top:14px;">
+          <li style="margin-bottom:12px;"><strong>Dasar HTML</strong> — Elemen, struktur, tag penting, semantic HTML.</li>
+          <li style="margin-bottom:12px;"><strong>Dasar CSS</strong> — Warna, typography, spacing, box model, selector.</li>
+          <li style="margin-bottom:12px;"><strong>Responsive Layout</strong> — Flexbox, Grid, media query, layout modern.</li>
+        </ol>
+      </div>
+
+      <!-- Syllabus -->
+      <div id="syllabus" style="margin-top:22px;">
+        <h3 class="section-title">Apa yang termasuk</h3>
+        <ul style="margin-top:10px;color:var(--muted);line-height:1.6;">
+          <li>Latihan membuat struktur halaman sederhana</li>
+          <li>Project mini tampilan website</li>
+          <li>Latihan Flexbox & Grid</li>
+          <li>Sertifikat penyelesaian</li>
+        </ul>
+      </div>
+
+      <footer style="margin-top:26px;text-align:right;color:var(--muted);">© 2025 StuTIcs</footer>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Global Styles for All Course Detail Pages */
+
+/* Root Variables */
+:root {
+    --text: #111;
+    --muted: #5c5c5c;
+    --primary: #5b2dff;
+    --radius: 18px;
+    --max-width: 1180px;
+
+    --soft-shadow: 0 4px 14px rgba(0,0,0,0.13);
+    --soft-shadow-big: 0 10px 26px rgba(0,0,0,0.17);
+}
+
+body {
+    margin: 0;
+    font-family: 'Garet', Arial, sans-serif;
+    background: linear-gradient(135deg, #efe5ff, #e3d4ff, #d9cdef, #dacbff, #ffdfff, #ffe8ff);
+    background-size: 300% 300%;
+    animation: bgMove 18s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.nav-center {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-item {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-item:hover { background: rgba(161,138,199,0.35); }
+.nav-item.active { background: #a18ac7; color: white; }
+
+/* Learning Path Layout */
+.learning-wrapper {
+    max-width: var(--max-width);
+    margin: 60px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 35px;
+}
+
+.learning-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.step-card {
+    background: white;
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: var(--soft-shadow);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.step-card:hover {
+    box-shadow: var(--soft-shadow-big);
+    transform: translateY(-4px);
+}
+
+.step-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.step-desc {
+    color: var(--muted);
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.detail-box {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--soft-shadow-big);
+}
+
+/* FIXED: this line was broken */
+.detail-title {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.detail-text {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+/* ✔ BUTTON SUDAH DIBENERIN */
+.start-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.2s;
+    box-shadow: 0 4px 12px rgba(91,45,255,0.3);
+}
+
+.start-btn:hover {
+    background: #4a22e0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 17px rgba(91,45,255,0.4);
+}
