@@ -368,6 +368,71 @@ a { text-decoration: none; }
     margin-left: 14px;
 }
 
+/* ===== VIDEO SHOWCASE SECTION ===== */
+
+.video-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    padding-bottom: 40px;
+}
+
+.video-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #2e2a47;
+    font-family: 'Helios Extended', sans-serif;
+}
+
+.video-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+}
+
+.decor-left img,
+.decor-right img {
+    width: 100px;
+    opacity: 0.35;
+    transform: rotate(-10deg);
+}
+
+/* Kotak video */
+.video-box {
+    width: 70%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .video-wrapper {
+        flex-direction: column;
+    }
+
+    .decor-left img,
+    .decor-right img {
+        width: 70px;
+        opacity: 0.28;
+    }
+
+    .video-box {
+        width: 95%;
+    }
+}
+
 /* ================= COURSES SECTION ================= */
 .courses-section {
     max-width: var(--max-width);
@@ -379,7 +444,7 @@ a { text-decoration: none; }
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
-    margin-top: 100px; /* jarak dari section sebelumnya */
+    margin-top: 80px; /* jarak dari section sebelumnya */
     margin-bottom: 80px; /* jarak ke section berikutnya */
 }
 
@@ -394,10 +459,10 @@ a { text-decoration: none; }
 .courses-section .image-left img {
     width: 100%;
     max-width: 480px;
-    height: auto;
+    height: 300px;
     border-radius: 24px; /* ujung melengkung */
     background: #cbbbec; /* latar ungu pastel */
-    padding: 20px; /* ruang di dalam */
+    padding: 0px; /* ruang di dalam */
     box-sizing: border-box;
 }
 
@@ -503,10 +568,10 @@ a { text-decoration: none; }
 .forum-section .image-right img {
     width: 100%;
     max-width: 480px;
-    height: auto;
+    height: 300px;
     border-radius: 24px; /* ujung melengkung */
     background: #cbbbec; /* latar ungu pastel */
-    padding: 20px;       /* ruang di dalam */
+    padding: 0px;       /* ruang di dalam */
     box-sizing: border-box;
 }
 
