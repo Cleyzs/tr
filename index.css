@@ -47,15 +47,17 @@ a { text-decoration: none; }
 
 .login-btn {
     padding: 8px 20px;
+    padding-top: 10px;
     border-radius: 100px;
     font-weight: 700;
     border: 2px solid #000;
     color: #000;
     margin-right: 0px; /* geser ke kiri */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100px;           /* Lebih lebar */
-    height: 40px;         /* Lebih tinggi */
-    font-size: 14px;        /* Lebih besar */
+    width: 70px;           /* Lebih lebar */
+    height: 20px;         /* Lebih tinggi */
+    font-size: 15px;        /* Lebih besar */
+    text-align: center;
 }
 
 .login-btn:hover {
@@ -64,16 +66,19 @@ a { text-decoration: none; }
 }
 
 .signup-btn {
-    padding: 8px 22px;
+    padding: 8px 20px;
+    padding-top: 10px;
     border-radius: 100px;
     font-weight: 700;
     background: #000;
+    border: 2px solid #000;
     color: #fff;
     margin-right: 40px; /* geser ke kiri */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    width: 100px;           /* Lebih lebar */
-    height: 40px;         /* Lebih tinggi */
-    font-size: 14px;        /* Lebih besar */
+    width: 70px;           /* Lebih lebar */
+    height: 20px;         /* Lebih tinggi */
+    font-size: 15px;        /* Lebih besar */
+    text-align: center;
 }
 
 .signup-btn:hover {
