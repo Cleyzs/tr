@@ -64,7 +64,7 @@ body {
 }
 
 .nav-logo {
-  width: 150px;
+  height: 48px;
 }
 
 .nav-center {
@@ -85,25 +85,18 @@ body {
   color: #7e22ce;
 }
 
-.avatar-img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
+/* Tombol panah/back */
+.back-btn {
+    font-size: 24px;
+    font-weight: 800px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
-.logout-btn {
-  margin-left: 15px;
-  padding: 7px 18px;
-  background: #7e22ce;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.logout-btn:hover {
-  background: #5b16a3;
+.back-btn:hover {
+    opacity: 0.6;
 }
 
 /* ========= PAGE LAYOUT ========= */

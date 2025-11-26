@@ -17,20 +17,26 @@
         <a href="#" class="nav-item active">Home</a>
         <a href="courses.html" class="nav-item">Courses</a>
         <a href="Forum.html" class="nav-item">Discussion Forums</a>
-        <a href="#" class="nav-item">Dashboard</a>
     </nav>
 
     <div class="nav-right">
 
     <div class="profile-dropdown">
-        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg" 
-            alt="Avatar" class="avatar-img">
+    <!-- Checkbox sebagai pemicu -->
+    <input type="checkbox" id="dropdown-toggle" class="toggle">
 
-        <div class="dropdown-menu">
-            <a href="Profil.html" class="dropdown-item">Profile</a>
-            <a href="index.html" class="dropdown-item logout">Log Out</a>
-        </div>
-    </div>
+    <!-- Trigger tampilannya -->
+    <label for="dropdown-toggle" class="trigger">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg" class="avatar-img">
+        <span class="arrow">▼</span>
+    </label>
+
+    <!-- Menu dropdown -->
+    <ul class="dropdown-menu">
+    <li><a href="Profil.html">Profile</a></li>
+    <li><a href="index.html" class="logout">Log Out</a></li>
+    </ul>
+</div>
 
 </div>
 
