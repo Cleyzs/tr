@@ -8,40 +8,37 @@
 </head>
 <body class="page-ready">
 
-  <!-- =========================
-       THEME CONTROLS (radio-only)
-       Two radios placed before the page so CSS sibling selectors work
-       ========================= -->
-  <input type="radio" name="theme" id="themeLight" checked class="theme-radio">
-  <input type="radio" name="theme" id="themeDark" class="theme-radio">
-
-  <div class="theme-switcher">
-    <label for="themeLight" class="label-sun" title="Light mode">🌞</label>
-    <label for="themeDark"  class="label-moon" title="Dark mode">🌙</label>
-  </div>
-
-  <!-- =========================
-       HEADER / NAVBAR
-       ========================= -->
-  <header class="navbar">
+<header class="navbar">
     <div class="nav-left">
-      <img src="Assets/Home Page/Logo_StuTics.png" alt="Logo StuTics" class="nav-logo">
-      <div class="brand">
-    
-      </div>
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" class="nav-logo">
     </div>
 
-    <nav class="nav-center" aria-label="Main navigation">
-      <a href="Profil.html" class="nav-item">Home</a>
-      <a href="courses.html" class="nav-item">Courses</a>
-      <a href="#" class="nav-item active">Discussions</a>
+    <nav class="nav-center">
+        <a href="#" class="nav-item">Home</a>
+        <a href="courses.html" class="nav-item">Courses</a>
+        <a href="Forum.html" class="nav-item active">Discussion Forums</a>
     </nav>
 
     <div class="nav-right">
-      <!-- visual placeholders; theme radio controls above actually change theme -->
-      
-    </div>
-  </header>
+
+    <div class="profile-dropdown">
+    <!-- Checkbox sebagai pemicu -->
+    <input type="checkbox" id="dropdown-toggle" class="toggle">
+
+    <!-- Trigger tampilannya -->
+    <label for="dropdown-toggle" class="trigger">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg" class="avatar-img">
+        <span class="arrow">▼</span>
+    </label>
+
+    <!-- Menu dropdown -->
+    <ul class="dropdown-menu">
+    <li><a href="Profil.html">Profile</a></li>
+    <li><a href="index.html" class="logout">Log Out</a></li>
+    </ul>
+</div>
+</div>
+</header>
 
   <!-- =========================
        CONTROLS (search / select / filter)
@@ -94,7 +91,7 @@
     <main class="content" role="main">
       <div class="header-main">
         <h1 class="title-gradient">Explore Discussions</h1>
-        <a class="btn-create" href="#" role="button">➕ Create</a>
+        <a class="btn-create" href="createforum.html" role="button">➕ Create</a>
       </div>
 
       <!-- CARD 1 -->
