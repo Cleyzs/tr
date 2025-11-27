@@ -6,44 +6,53 @@
   <title>StuTics Forum</title>
   <link rel="stylesheet" href="Forum.css">
 </head>
+
 <body class="page-ready">
 
+<!-- =========================
+     NAVBAR
+========================= -->
 <header class="navbar">
     <div class="nav-left">
-        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" class="nav-logo">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png"
+             class="nav-logo">
     </div>
 
     <nav class="nav-center">
-        <a href="#" class="nav-item">Home</a>
+        <a href="home.html" class="nav-item">Home</a>
         <a href="courses.html" class="nav-item">Courses</a>
-        <a href="Forum.html" class="nav-item active">Discussion Forums</a>
+        <a href="forum.html" class="nav-item active">Discussion Forums</a>
     </nav>
 
     <div class="nav-right">
+        <div class="profile-dropdown">
 
-    <div class="profile-dropdown">
-    <!-- Checkbox sebagai pemicu -->
-    <input type="checkbox" id="dropdown-toggle" class="toggle">
+            <!-- Checkbox Toggle Dropdown -->
+            <input type="checkbox" id="dropdown-toggle" class="toggle">
 
-    <!-- Trigger tampilannya -->
-    <label for="dropdown-toggle" class="trigger">
-        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg" class="avatar-img">
-        <span class="arrow">▼</span>
-    </label>
+            <!-- Trigger -->
+            <label for="dropdown-toggle" class="trigger">
+                <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg"
+                     class="avatar-img">
+                <span class="arrow">▼</span>
+            </label>
 
-    <!-- Menu dropdown -->
-    <ul class="dropdown-menu">
-    <li><a href="Profil.html">Profile</a></li>
-    <li><a href="index.html" class="logout">Log Out</a></li>
-    </ul>
-</div>
-</div>
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu">
+                <li><a href="Profil.html">Profile</a></li>
+                <li><a href="index.html" class="logout">Log Out</a></li>
+            </ul>
+
+        </div>
+    </div>
 </header>
 
-  <!-- =========================
-       CONTROLS (search / select / filter)
-       ========================= -->
-  <section class="controls">
+
+
+<!-- =========================
+     CONTROLS (SEARCH / FILTER)
+========================= -->
+<section class="controls">
     <div class="search-wrap">
       <input class="search" type="text" placeholder="Cari judul diskusi" aria-label="Cari">
       <span class="search-ico" aria-hidden>🔍</span>
@@ -56,13 +65,15 @@
       <option>Networking</option>
     </select>
 
-    <a class="filter" href="#" role="button">⚙️ Filter</a>
-  </section>
+    <a class="filter" href="#" role="button">⚙ Filter</a>
+</section>
 
-  <!-- =========================
-       LAYOUT (sidebar + content)
-       ========================= -->
-  <div class="layout">
+
+
+<!-- =========================
+     LAYOUT (SIDEBAR + CONTENT)
+========================= -->
+<div class="layout">
 
     <!-- SIDEBAR -->
     <aside class="sidebar" aria-label="Sidebar">
@@ -87,8 +98,10 @@
       </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
+
+    <!-- CONTENT -->
     <main class="content" role="main">
+
       <div class="header-main">
         <h1 class="title-gradient">Explore Discussions</h1>
         <a class="btn-create" href="createforum.html" role="button">➕ Create</a>
@@ -167,10 +180,11 @@
       </article>
 
     </main>
-  </div>
+</div>
 
-  <!-- FLOATING ACTION -->
-  <a class="fab" href="#" aria-label="Buat Diskusi">✨</a>
+
+<!-- FLOAT BUTTON -->
+<a class="fab" href="#" aria-label="Buat Diskusi">✨</a>
 
 </body>
 </html>
