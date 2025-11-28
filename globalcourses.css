@@ -7,9 +7,12 @@
     --primary: #5b2dff;
     --radius: 18px;
     --max-width: 1180px;
-
     --soft-shadow: 0 4px 14px rgba(0,0,0,0.13);
     --soft-shadow-big: 0 10px 26px rgba(0,0,0,0.17);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -43,9 +46,20 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 48px;
+    max-width: 100%;
+}
+
 .nav-center {
     display: flex;
     gap: 35px;
+    justify-content: center;
 }
 
 .nav-item {
@@ -56,10 +70,92 @@ body {
     color: black;
     text-decoration: none;
     transition: 0.2s;
+    white-space: nowrap;
 }
 
-.nav-item:hover { background: rgba(161,138,199,0.35); }
-.nav-item.active { background: #a18ac7; color: white; }
+.nav-item:hover { 
+    background: rgba(161,138,199,0.35); 
+}
+
+.nav-item.active { 
+    background: #a18ac7; 
+    color: white; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 9999;
+}
+
+.toggle {
+    display: none;
+}
+
+.trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.arrow {
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 999;
+}
+
+.toggle:checked ~ .dropdown-menu {
+    display: block;
+}
+
+.toggle:checked + .trigger .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px 18px;
+}
+
+.dropdown-menu li:hover {
+    background: #f2f2f2;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
 
 /* Learning Path Layout */
 .learning-wrapper {
@@ -94,34 +190,37 @@ body {
 .step-title {
     font-weight: 700;
     font-size: 18px;
+    margin: 0;
 }
 
 .step-desc {
     color: var(--muted);
-    margin-top: 4px;
+    margin-top: 8px;
+    margin-bottom: 0;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .detail-box {
     background: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: var(--radius);
     box-shadow: var(--soft-shadow-big);
 }
 
-/* FIXED: this line was broken */
 .detail-title {
-    font-size: 28px;
+    font-size: clamp(22px, 4vw, 28px);
     font-weight: 800;
+    margin: 0 0 16px 0;
 }
 
 .detail-text {
     color: var(--muted);
     line-height: 1.7;
-    margin-top: 12px;
+    margin: 0 0 24px 0;
+    font-size: clamp(14px, 2vw, 16px);
 }
 
-/* ✔ BUTTON SUDAH DIBENERIN */
 .start-btn {
     background: var(--primary);
     color: white;
@@ -133,10 +232,227 @@ body {
     font-weight: 600;
     transition: 0.2s;
     box-shadow: 0 4px 12px rgba(91,45,255,0.3);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.start-btn:link,
+.start-btn:visited,
+.start-btn:active {
+    text-decoration: none;
 }
 
 .start-btn:hover {
     background: #4a22e0;
     transform: translateY(-3px);
     box-shadow: 0 6px 17px rgba(91,45,255,0.4);
+}
+
+/* =============================
+   RESPONSIVE BREAKPOINTS
+============================= */
+
+/* Tablet Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .nav-logo {
+        height: 40px;
+    }
+
+    .nav-center {
+        gap: 20px;
+    }
+
+    .nav-item {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+
+    .learning-wrapper {
+        grid-template-columns: 300px 1fr;
+        gap: 25px;
+        margin: 40px auto;
+    }
+
+    .step-card {
+        padding: 16px;
+    }
+
+    .step-title {
+        font-size: 16px;
+    }
+
+    .step-desc {
+        font-size: 13px;
+    }
+
+    .detail-box {
+        padding: 25px;
+    }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: auto 1fr auto;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .nav-logo {
+        height: 36px;
+    }
+
+    .nav-center {
+        gap: 10px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .nav-center::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-item {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .avatar-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .learning-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .learning-steps {
+        order: 2;
+        gap: 12px;
+    }
+
+    .detail-box {
+        order: 1;
+        padding: 20px;
+    }
+
+    .step-card {
+        padding: 14px;
+    }
+
+    .step-title {
+        font-size: 16px;
+    }
+
+    .step-desc {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .start-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .nav-logo {
+        height: 32px;
+    }
+
+    .nav-center {
+        gap: 8px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .avatar-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .arrow {
+        font-size: 12px;
+    }
+
+    .learning-wrapper {
+        margin: 20px auto;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .detail-box {
+        padding: 18px;
+    }
+
+    .step-card {
+        padding: 12px;
+    }
+
+    .step-title {
+        font-size: 15px;
+    }
+
+    .step-desc {
+        font-size: 12px;
+    }
+
+    .start-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .dropdown-menu {
+        width: 130px;
+    }
+
+    .dropdown-menu li {
+        padding: 8px 12px;
+    }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .nav-item {
+        font-size: 11px;
+        padding: 4px 6px;
+    }
+
+    .detail-box {
+        padding: 15px;
+    }
+
+    .step-card {
+        padding: 10px;
+    }
+
+    .step-title {
+        font-size: 14px;
+    }
+
+    .step-desc {
+        font-size: 11px;
+    }
+
+    .start-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
 }
