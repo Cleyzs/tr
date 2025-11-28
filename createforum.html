@@ -3,61 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a New Discussion</title>
-    <link rel="stylesheet" href="createforum.css">
+    <title>Create Discussion</title>
+    <link rel="stylesheet" href="courses.css">
 </head>
 <body>
 
-    <a href="forum.html" class="btn-exit">❌</a>
+    <header class="topbar">
+        <div class="logo">
+            <a href="forum.html" class="exit-link">
+            <img src="Assets/Home Page/exit button.png" class="exit-btn">
+            </a>
+            <span>Create A New Forum</span>
+        </div>
+    </header>
 
-    <div class="create-page">
-
-        <h1 class="page-title">Create a New Discussion</h1>
+    <main class="container">
 
         <div class="info-box">
-            Make sure you have read <a href="#">Forum Rules</a> before making a discussion.
+            <p>Make sure you have read <a href="#">Forum Rules</a> before making a discussion.</p>
         </div>
 
-        <form action="forum.html">
-        <div class="form-section">
+        <form class="card">
 
-            <label class="form-label">Learning Module</label>
-            <select class="input-field" required>
+            <label>Learning Module</label>
+            <select>
                 <option>Select a module</option>
                 <option>IOT</option>
-                <option>Network</option>
                 <option>HTML & CSS</option>
+                <option>Networking</option>
             </select>
 
-            <label class="form-label">Question Title</label>
-            <input type="text" class="input-field" placeholder="Write a short title for your question" required />
+            <label required>Question Title</label>
+            <input type="text" placeholder="Write a short title for your question" required>
 
-            <label class="form-label">Question Description</label>
+            <label>Question Description</label>
             <div class="editor">
-                <div class="editor-toolbar">
+                <div class="tools">
                     <button>B</button>
                     <button>I</button>
                     <button>U</button>
                     <button>Link</button>
                     <button>Code</button>
                 </div>
-                <textarea class="editor-input" placeholder="Write something..."></textarea>
-                <div class="editor-counter">0 characters</div>
+                <textarea placeholder="Type something..."required></textarea>
             </div>
 
-            <label class="editor-info">Describe your question clearly.</label>
+            <label>Keywords</label>
+            <input type="text" placeholder="IOT, HTML & CSS, Networking" required>
+                
+           <a href="forum.html" class="submit-btn">Create Discussion</a required>
 
-            <label class="form-label">Keywords</label>
-            <input type="text" class="input-field" placeholder="Example: html, css, beginner" />
-            
-            <p class="tag-hint">Write several keywords separated by commas. Maximum 6 tags.</p>
 
-            <button class="btn-submit">Publikasikan</button>
+        </form>
 
-        </div>
-      </form>
-    </div>
-
+    </main>
 
 </body>
 </html>

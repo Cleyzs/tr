@@ -246,11 +246,51 @@ body{
     font-weight: 700;
 }
 
-.filter{ padding:10px 14px; 
+.controls {
+    margin-top: 90px;
+}
+
+body {
+    padding-top: 50px; /* jarak untuk memperbaiki navbar dan controls */
+}
+
+
+.filter{ 
+    padding:10px 14px; 
     border-radius:12px; 
     color:#fff; 
     text-decoration:none; 
     background: linear-gradient(90deg,var(--purple-1),var(--purple-2));
+}
+
+
+
+/* FIX TYPO */
+.search-icon{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    opacity:.85;
+}
+
+/* SELECT */
+.select-mod{
+    padding:10px 12px;
+    border-radius:12px;
+    border:2px solid rgba(160,120,255,0.12);
+    background:#fff;
+    font-weight:700;
+}
+
+/* FILTER BUTTON */
+.filter{
+    padding:10px 14px; 
+    border-radius:12px; 
+    color:#fff; 
+    text-decoration:none; 
+    background: linear-gradient(90deg,var(--purple-1),var(--purple-2));
+    font-weight:700;
 }
 
 /* ---------- LAYOUT ---------- */
@@ -550,4 +590,119 @@ p,
 .content {
   font-family: var(--font-body);
   font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE – LAPTOP / TABLET LANDSCAPE (≤1024px)
+============================================ */
+@media (max-width: 1024px) {
+    .topbar {
+        padding: 15px 25px;
+    }
+
+    .logo span {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE – TABLET / HP LEBAR (≤768px / 700px)
+============================================ */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 12px 20px;
+    }
+
+    .logo span {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .card {
+        padding: 22px;
+        gap: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    select, input, textarea {
+        padding: 10px 12px;
+        font-size: 13.5px;
+    }
+
+    textarea {
+        height: 110px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE – HP KECIL (≤480px / 400px)
+============================================ */
+@media (max-width: 480px) {
+
+    .topbar {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+
+    .exit-btn {
+        width: 40px;
+        height: 22px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 16px;
+        gap: 14px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    select, input, textarea {
+        padding: 9px 10px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
 }
