@@ -268,45 +268,157 @@ body {
     object-fit: contain;
 }
 
-.section {
-    padding: 40px;
+/* ====================== SLIDER STYLE ======================= */
+.section-slider {
+    padding: 20px 40px;
+    margin-top: 40px;
 }
 
-.section h2 {
+.section-slider h2 {
     font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-    transition: 0.2s;
-}
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.event-box {
-    background: #fafafa;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #e5e5e5;
     margin-bottom: 15px;
 }
-.event-box h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
+
+/* ROW scroll horizontal */
+.slider-row {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
 }
-.event-box p {
+
+.slider-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider-row::-webkit-scrollbar-thumb {
+    background: #c9c2ff;
+    border-radius: 4px;
+}
+
+/* =============== COURSE CARD =============== */
+.course-card {
+    min-width: 320px;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+    scroll-snap-align: start;
+    transition: 0.25s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    height: 150px;
+    background: url("https://img.freepik.com/free-vector/gradient-ai-technology-background_23-2149126883.jpg") center/cover;
+}
+
+/* Update gambar sesuai tema */
+.card-img.webdev {
+    background: url("https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150061951.jpg") center/cover;
+}
+
+.card-img.deep {
+    background: url("https://img.freepik.com/free-photo/ai-cloud-with-robot-head_23-2151296200.jpg") center/cover;
+}
+
+.card-body {
+    padding: 15px 18px;
+}
+
+.card-category {
+    font-size: 13px;
+    color: #6a5acd;
+    font-weight: 600;
+}
+
+.card-body h3 {
+    margin: 6px 0 8px;
+    font-size: 20px;
+    color: #111;
+}
+
+.card-info {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 14px;
+}
+
+/* Buttons */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.info-btn {
+    padding: 8px 14px;
+    background: #eee;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.start-btn {
+    padding: 8px 14px;
+    background: #5b2dff;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* =============== EVENT CARD =============== */
+.event-card {
+    min-width: 320px;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+    scroll-snap-align: start;
+    transition: 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.event-img {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+.event-img.hackathon {
+    background-image: url("https://img.freepik.com/free-photo/hackathon-event-concept_23-2149091550.jpg");
+}
+
+.event-img.google {
+    background-image: url("https://img.freepik.com/free-photo/developer-meeting-modern-office_23-2149242035.jpg");
+}
+
+.event-img.ai {
+    background-image: url("https://img.freepik.com/free-photo/artificial-intelligence-concept-with-brain_23-2149160461.jpg");
+}
+
+.event-body {
+    padding: 15px;
+}
+
+.event-body h3 {
+    margin: 0 0 6px;
+    font-size: 19px;
+}
+
+.event-body p {
+    font-size: 15px;
     color: #555;
 }
 
