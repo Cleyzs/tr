@@ -812,3 +812,208 @@ body {
     height: 120px;
   }
 }
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #000000;
+    color: #d7d9e4;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* LEFT */
+.footer-left .footer-logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-desc {
+    margin-top: 41px;
+    color: #98a2b3;
+    font-size: 15px;
+}
+
+.footer-logo-img {
+    width: 160px; /* ukuran khusus footer */
+    height: auto;
+}
+
+.nav-left {
+    height: 48px;          /* Seukuran teks sebelumnya */
+    object-fit: contain;
+    display: block;
+}
+
+/* CENTER COLUMNS */
+.footer-center {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    color: #9ca3af;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #e4e6eb;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+/* RIGHT SECTION */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* LET'S CONNECT + GITHUB sebelahan */
+.connect-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.connect-text {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+    display: flex;           /* BIAR TIDAK TENGAH */
+    align-items: center;     /* RAPIH */
+    gap: 8px;                /* JARAK TEKS - ICON */
+}
+
+.connect-text:hover {
+    opacity: 0.8;
+}
+
+.git-icon {
+    width: 26px;
+    filter: invert(1);
+    transition: 0.25s;
+}
+
+.git-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons img {
+    width: 28px;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+    background: #000000;
+    padding: 15px 80px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;   /* biar rata tengah vertikal */
+    gap: 20px;             /* jarak antar item */
+
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 30px;
+        flex-direction: column;
+    }
+
+    .footer-center {
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        padding: 15px 30px;
+    }
+}
+
+/* Kolom Contact Us (icon berjajar) */
+.footer-contact .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-contact .social-icons img {
+    width: 26px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.footer-contact .social-icons img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* Let’s Connect di pojok kanan bawah */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-connect {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-connect .connect-text {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.bottom-connect .connect-text:hover {
+    opacity: 0.8;
+}
