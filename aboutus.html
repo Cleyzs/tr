@@ -8,6 +8,38 @@
 </head>
 <body>
 
+    <header class="navbar">
+    <div class="nav-left">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" class="nav-logo">
+    </div>
+
+    <nav class="nav-center">
+        <a href="home.html" class="nav-item">Home</a>
+        <a href="courses.html" class="nav-item">Courses</a>
+        <a href="Forum.html" class="nav-item">Discussion Forums</a>
+    </nav>
+
+    <div class="nav-right">
+
+    <div class="profile-dropdown">
+    <!-- Checkbox sebagai pemicu -->
+    <input type="checkbox" id="dropdown-toggle" class="toggle">
+
+    <!-- Trigger tampilannya -->
+    <label for="dropdown-toggle" class="trigger">
+        <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/photo%20profile%20purple.jpg" class="avatar-img">
+        <span class="arrow">▼</span>
+    </label>
+
+    <!-- Menu dropdown -->
+    <ul class="dropdown-menu">
+    <li><a href="Profil.html">Profile</a></li>
+    <li><a href="index.html" class="logout">Log Out</a></li>
+    </ul>
+</div>
+</div>
+</header>
+
     <section class="about-section">
 
         <h1 class="about-subtitle">ABOUT US</h1>
@@ -29,11 +61,29 @@
         </p>
 
         <div class="about-gallery">
-            <div class="img-box"><img src="Assets/Home Page/olive.jpg"></div>
-            <div class="img-box"><img src="Assets/Home Page/arwin.jpg"></div>
-            <div class="img-box"><img src="Assets/Home Page/gwyneth.jpg"></div>
-            <div class="img-box"><img src="Assets/Home Page/clemens.jpg"></div>
-        </div>
+
+    <div class="img-box">
+        <p class="img-name">Olive</p>
+        <img src="Assets/Home Page/olive.jpg">
+    </div>
+
+    <div class="img-box">
+        <p class="img-name">Arwin</p>
+        <img src="Assets/Home Page/arwin.jpg">
+    </div>
+
+    <div class="img-box">
+        <p class="img-name">Gwyneth</p>
+        <img src="Assets/Home Page/gwyneth.jpg">
+    </div>
+
+    <div class="img-box">
+        <p class="img-name">Clemens</p>
+        <img src="Assets/Home Page/clemens.jpg">
+    </div>
+
+</div>
+
 
         <a class="cta-btn" href="home.html">LET'S GO</a>
     </section>
