@@ -85,7 +85,6 @@ body {
   color: #7e22ce;
 }
 
-/* Tombol panah/back */
 .back-btn {
     font-size: 24px;
     font-weight: 800px;
@@ -262,3 +261,301 @@ body {
   font-size: 13px;
   color: #777;
 }
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #000000;
+    color: #d7d9e4;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-left .footer-logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-desc {
+    margin-top: 41px;
+    color: #98a2b3;
+    font-size: 15px;
+}
+
+.footer-logo-img {
+    width: 160px;
+}
+
+.nav-left {
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+/* CENTER COLUMNS */
+.footer-center {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    color: #9ca3af;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #e4e6eb;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons img {
+    width: 28px;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* BOTTOM COPYRIGHT BAR */
+.footer-bottom {
+    background: #000000;
+    padding: 15px 80px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+.bottom-connect {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-connect .connect-text {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.bottom-connect .connect-text:hover {
+    opacity: 0.8;
+}
+
+/* ===============================
+     RESPONSIVE BREAKPOINTS
+=============================== */
+
+/* ========= 1024px ========= */
+@media (max-width: 1024px) {
+
+  .page-wrap {
+      padding: 30px;
+      gap: 30px;
+  }
+
+  .profile-card {
+      width: 260px;
+  }
+
+  .courses-row {
+      flex-wrap: wrap;
+  }
+
+  .course-pill {
+      width: 48%;
+  }
+
+  .footer {
+      padding: 50px 50px;
+      gap: 40px;
+  }
+
+  .footer-center {
+      gap: 60px;
+  }
+}
+
+/* ========= 768px (Tablet) ========= */
+@media (max-width: 768px) {
+
+  .navbar {
+      padding: 16px 25px;
+  }
+
+  .nav-logo {
+      height: 40px;
+  }
+
+  .page-wrap {
+      flex-direction: column;
+      padding: 25px;
+      gap: 25px;
+  }
+
+  .profile-card {
+      width: 100%;
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      align-items: center;
+  }
+
+  .avatar-big {
+      width: 95px;
+      height: 95px;
+      margin: 0;
+  }
+
+  .profile-top h2,
+  .muted {
+      text-align: left;
+  }
+
+  .courses-row {
+      flex-direction: column;
+  }
+
+  .course-pill {
+      width: 100%;
+  }
+
+  .inbox-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+  }
+
+  .footer {
+      flex-direction: column;
+      padding: 40px 30px;
+  }
+
+  .footer-center {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .footer-bottom {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      padding: 15px 30px;
+  }
+
+  .bottom-connect {
+      margin-left: 0;
+  }
+
+}
+
+/* ========= 480px (Mobile) ========= */
+@media (max-width: 480px) {
+
+  body {
+      overflow-x: hidden;
+  }
+
+  .navbar {
+      padding: 14px 18px;
+  }
+
+  .nav-logo {
+      height: 36px;
+  }
+
+  .page-wrap {
+      padding: 18px;
+  }
+
+  .profile-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .detail-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+  }
+
+  .courses-section h2,
+  .inbox-section h2 {
+      font-size: 20px;
+  }
+
+  .inbox-card {
+      padding: 14px;
+  }
+
+  .footer {
+      padding: 35px 20px;
+  }
+
+  .footer-column a {
+      font-size: 14px;
+  }
+
+  .footer-desc {
+      font-size: 14px;
+  }
+
+  .social-icons img {
+      width: 24px;
+  }
+
+  .footer-bottom {
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 13px;
+  }
+
+  .bottom-connect {
+      margin-left: 0;
+  }
+}
+

@@ -1,17 +1,6 @@
-/* ========================================
-   GLOBAL
-======================================== */
-:root {
-  --bg: #f7f5ff;
-  --card: #ffffff;
-  --text: #2c2c2c;
-  --muted: #8e8e8e;
-  --accent: #8d6ff2;
-  --accent-light: #d8cdff;
-  --radius: 18px;
-  --shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
+/* ----------------------------------------------------
+   RESET
+---------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -20,196 +9,169 @@
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: #f2eaff;       /* bg ungu soft */
+  color: #333;
 }
 
-/* ========================================
+/* ----------------------------------------------------
    HEADER
-======================================== */
+---------------------------------------------------- */
 .site-header {
-  background: var(--card);
-  padding: 15px 35px;
+  width: 100%;
+  background: #6a4ff5;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  color: #fff;
 }
 
 .brand {
   font-size: 26px;
-  font-weight: 700;
-  color: var(--accent);
+  font-weight: bold;
 }
 
 .site-nav a {
+  margin-left: 25px;
   text-decoration: none;
-  margin-left: 20px;
-  padding: 7px 14px;
-  border-radius: 10px;
+  color: #e6e4ff;
   font-weight: 500;
-  color: var(--text);
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
-.site-nav a:hover {
-  background: var(--accent-light);
-}
-
-.site-nav .active {
-  background: var(--accent);
+.site-nav a:hover,
+.site-nav a.active {
   color: #fff;
 }
 
-/* ========================================
-   DASHBOARD LAYOUT
-======================================== */
+/* ----------------------------------------------------
+   LAYOUT
+---------------------------------------------------- */
 .dashboard-layout {
   display: flex;
+  padding: 20px 40px;
+  gap: 20px;
 }
 
-/* ========================================
+/* ----------------------------------------------------
    SIDEBAR
-======================================== */
+---------------------------------------------------- */
 .sidebar {
-  width: 240px;
-  background: #fff;
-  min-height: 100vh;
-  padding: 30px 20px;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
 }
 
 .profile-mini {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 35px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  background: var(--accent-light);
-  color: var(--accent);
+  width: 55px;
+  height: 55px;
+  background: #6a4ff5;
+  color: #fff;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 20px;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .side-nav .side-link {
   display: block;
-  padding: 12px 14px;
-  margin-bottom: 6px;
-  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
   text-decoration: none;
-  color: var(--text);
+  border-radius: 10px;
+  color: #444;
   font-weight: 500;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
 .side-nav .side-link:hover {
-  background: var(--accent-light);
+  background: #f4efff;
 }
 
 .side-nav .active {
-  background: var(--accent);
+  background: #6a4ff5;
   color: #fff;
 }
 
-/* ========================================
+/* ----------------------------------------------------
    MAIN CONTENT
-======================================== */
+---------------------------------------------------- */
 .dashboard-main {
   flex: 1;
-  padding: 40px 45px;
 }
 
-/* ========================================
-   STATS SECTION
-======================================== */
+/* Stats cards */
 .stats {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .stat-card {
   flex: 1;
-  min-width: 220px;
-  background: var(--card);
+  background: #fff;
   padding: 25px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
   text-align: center;
 }
 
 .stat-card h3 {
   font-size: 36px;
-  color: var(--accent);
+  color: #6a4ff5;
   margin-bottom: 5px;
 }
 
-.stat-card p {
-  color: var(--muted);
-  font-weight: 500;
-}
-
-/* ========================================
-   TASK LIST
-======================================== */
+/* ----------------------------------------------------
+   TASKS
+---------------------------------------------------- */
 .tasks h2 {
+  font-size: 22px;
   margin-bottom: 15px;
-  color: var(--accent);
 }
 
 .task-list {
   list-style: none;
-  padding-left: 0;
 }
 
 .task-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e5e5;
-  font-size: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  display: inline-block;
 }
 
-.done {
-  background: #4caf50;
-}
+.dot.done { background: #00c853; }
+.dot.pending { background: #ff9100; }
+.dot.progress { background: #2962ff; }
 
-.pending {
-  background: #ff9800;
-}
-
-.progress {
-  background: #2196f3;
-}
-
-/* ========================================
+/* ----------------------------------------------------
    FOOTER
-======================================== */
+---------------------------------------------------- */
 .site-footer {
   text-align: center;
-  padding: 25px 0;
-  margin-top: 30px;
-  color: var(--muted);
+  padding: 20px;
+  margin-top: 40px;
+  color: #777;
 }
