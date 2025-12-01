@@ -16,7 +16,7 @@
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-left">
-    <img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" alt="StuTIcs Logo" class="nav-logo">
+    <a href="index.html"><img src="https://raw.githubusercontent.com/Cleyzs/tr/refs/heads/main/Assets/Home%20Page/Logo_StuTics.png" alt="StuTIcs Logo" class="nav-logo"></a>
         </div>
         <nav class="nav-menu">
             <a href="login.html" class="login-btn">Log In</a>
@@ -41,7 +41,7 @@
     </section>
 
     <!-- WHAT YOU WILL LEARN -->
-<section class="learn-section" id="what-you-will-learn">
+    <section class="learn-section" id="what-you-will-learn">
     <h2 class="learn-title">What You Will Learn In The Course?</h2>
 
     <div class="learn-grid">
@@ -74,7 +74,7 @@
 </section>
 
     <!-- MENTORS -->
-<section class="mentor-section">
+    <section class="mentor-section" id="mentor">
     <h2 class="mentor-title">Meet Our Expert Mentors</h2>
 
     <div class="mentor-wrapper">
@@ -113,12 +113,12 @@
     </div>
 
     <div class="more-mentors">
-        <h3>and many more....</h3>
+        <a href="login.html" class="btn-mentor">Learn More ↗</a>
     </div>
 </section>
 
 <!-- VIDEO SHOWCASE -->
-<section class="video-section">
+<section class="video-section" id="experience">
     <h2 class="video-title">Student Learning Experience</h2>
 
     <div class="video-wrapper">
@@ -129,7 +129,7 @@
 
         <div class="video-box">
             <iframe 
-                src="video_percobaan.mp4" 
+                src="Assets/Video/video_percobaan.mp4" 
                 title="Video Showcase"
                 frameborder="0"
                 allowfullscreen>
@@ -144,7 +144,7 @@
 </section>
 
     <!-- COURSES -->
-    <section class="courses-section">
+    <section class="courses-section" id="courses">
     <div class="image-left">
         <img src="https://web.library.uq.edu.au/sites/default/files/styles/uqds_card/public/2024-12/card-dutton-park-library-study-coursework-laptop.jpg?itok=nHCEyNbX" alt="Course Placeholder">
     </div>
@@ -156,7 +156,7 @@
     </section>
 
     <!-- FORUM -->
-    <section class="forum-section">
+    <section class="forum-section" id="forum">
     <div class="content-left">
         <h2 class="section-title">Discussion Forums</h2>
         <p class="section-desc">Kembangkan pemahaman lewat tanya jawab, brainstorming, dan sharing pengalaman nyata dari komunitas. Diskusikan bug, konsep, algoritma, atau topik apa pun di dalam track yang kamu pelajari. Semua dalam satu ruang belajar kolaboratif.</p>
@@ -169,7 +169,7 @@
 
 
     <!-- TESTIMONIALS -->
-    <section class="testimonial-section">
+    <section class="testimonial-section" id="testimoni">
         <h2 class="section-title">What They're Saying</h2>
 
         <div class="testimonial-grid">
@@ -231,7 +231,7 @@
     </section>
 
     <!-- ABOUT US -->
-<section class="about-section">
+<section class="about-section" id="aboutus">
     <div class="about-inner">
         
         <h2 class="section-title">About Us</h2>
@@ -250,19 +250,76 @@
     </div>
 </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-    <p class="copy">© 2025 All Rights Reserved</p>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
 
-    <div class="right-footer">
-        <p class="connect">Let's Connect With Our Group Project</p>
+    <!-- LEFT LOGO + DESC -->
+    <div class="footer-left">
+        <div class="nav-left">
+            <a href="index.html"><img src="https://github.com/Cleyzs/tr/blob/main/Assets/Home%20Page/Logo_StuTIcs_Black_Version.png?raw=true" class="footer-logo-img" alt="StuTIcs Logo"></a>
+        </div>
+        <p class="footer-desc">Learning Course platform for Coding & Collaboration.</p>
+    </div>
 
-        <!-- Tambahkan link GitHub di sini -->
-        <a href="https://github.com/Cleyzs/tr" target="_blank" class="github-link">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    <!-- MIDDLE COLUMNS -->
+    <div class="footer-center">
+
+        <!-- COLUMN 1 -->
+        <div class="footer-column">
+            <h4>Learning Materials</h4>
+            <a href="#what-you-will-learn">Software Engineer</a>
+            <a href="#what-you-will-learn">Full-Stack Web Development</a>
+            <a href="#what-you-will-learn">Data Science</a>
+            <a href="#what-you-will-learn">Dasar Jaringan Komputer</a>
+            <a href="#what-you-will-learn">Android Development</a>
+            <a href="#what-you-will-learn">Deep Learning & Neural Network</a>
+            <a href="#what-you-will-learn">Cryptography</a>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="footer-column">
+            <h4>Page Guide</h4>
+            <a href="#what-you-will-learn">Learning Paths</a>
+            <a href="#mentor">Mentors</a>
+            <a href="#experience">Experience</a>
+            <a href="#courses">Courses</a>
+            <a href="#forum">Forum Discussions</a>
+            <a href="#testimoni">Ratings</a>
+            <a href="#aboutus">About Us</a>
+        </div>
+
+        <!-- COLUMN 3 CONTACT -->
+        <div class="footer-column footer-contact">
+            <h4>Contact Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+                <a href="https://x.com/?lang=en"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                <a href="https://www.youtube.com/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+                <a href="https://www.tiktok.com/en/"><img src="https://openpng.net/media/uploads/tiktok-logo-icon/TikTok%20Logo%20Icon.png" alt="TikTok"></a>
+                <a href="https://www.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1280px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook"></a>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bottom small bar + CONNECT DIPINDAH KE KANAN BAWAH -->
+<div class="footer-bottom">
+    <h3 class="footer-logo">© 2025 All Rights Reserved</h3>
+
+    <a href="#">Terms</a>
+    <a href="#">Privacy Policy</a>
+
+    <div class="bottom-connect">
+        <a href="https://github.com/Cleyzs/tr" target="_blank" class="connect-text">
+            Let's Connect With Our Group Project
+            <img class="git-icon" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
         </a>
     </div>
-</footer>
+</div>
+
 
 </body>
 </html>
