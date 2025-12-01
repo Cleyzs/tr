@@ -494,3 +494,19 @@ body {
 .dropdown-menu a.logout:hover {
     background: #ffe7e7;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 30px;
+        flex-direction: column;
+    }
+
+    .footer-center {
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        padding: 15px 30px;
+    }
+}
