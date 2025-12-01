@@ -549,6 +549,28 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+.about-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+        gap: 18px;
+        padding: 0 10px;
+    }
+
+    .img-box {
+        padding: 8px;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: auto;       /* penting: biar tidak ketarik */
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .img-name {
+        font-size: 14px;
+    }
+
     .footer {
         padding: 50px 30px;
         flex-direction: column;
