@@ -1,88 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StuTIcs — Mobile App</title>
-  <link rel="stylesheet" href="all.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuTIcs — Mobile App</title>
+    <!-- Link Font Poppins dan Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tautan ke file CSS terpisah -->
+    <link rel="stylesheet" href="all.css">
 </head>
+<body class="page-mobileapp">
 
-<body class="page page-mobileapp">
+    <!-- Mobile App Background Blobs -->
+    <div class="blob-bg mob1"></div>
+    <div class="blob-bg mob2"></div>
+    <div class="blob-bg mob3"></div>
 
-  <!-- BLOBS BACKGROUND MOBILE -->
-  <div class="mob1"></div>
-  <div class="mob2"></div>
-  <div class="mob3"></div>
+    <!-- Header -->
+    <header class="site-header">
+        <a href="#" class="brand">StuTIcs</a>
+        <nav class="site-nav">
+            <a href="webdesigning.html">Web Designing</a>
+            <a href="mobileep.html" class="active">Mobile App</a>
+        </nav>
+    </header>
 
-  <header class="site-header">
-    <div class="brand">StuTIcs</div>
+    <div class="container">
 
-    <nav class="site-nav">
-      <a href="webdesigning.html">Web Designing</a>
-      <a href="mobileep.html" class="active">Mobile App</a>
-    </nav>
-  </header>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>Mobile App</h1>
+            <p>
+                Aplikasi-aplikasi edukasi terbaik untuk mendukung proses belajar mengajar secara daring dan interaktif. Pilih dan pelajari fitur utama dari platform EdTech terdepan di Indonesia.
+            </p>
+        </section>
 
-  <main class="container">
+        <!-- FEATURE APP GRID (Lebar dan Terpisah) -->
+        <section class="feature-apps">
+            <div class="app-grid">
+                
+                <!-- BOX 1: Ruang Guru -->
+                <div class="app-box">
+                    <!-- Placeholder untuk Ruang Guru -->
+                    <img 
+                        src="Assets/Home Page/Kisah Inspiratif Belva Devara Membangun Aplikasi Ruang Guru.jpg" 
+                        alt="Ruang Guru"
+                      
+                    />
+                    <h3>Ruang Guru</h3>
+                    <p>
+                        Ruangguru adalah platform pendidikan berbasis teknologi (edtech) terbesar di Indonesia 
+                        yang menyediakan layanan belajar online untuk siswa dari SD hingga SMA. 
+                        Platform ini menawarkan berbagai fitur mulai dari video belajar interaktif, 
+                        bank soal yang komprehensif, hingga sesi konsultasi langsung (live class) dengan guru-guru terbaik. 
+                        Ruangguru membantu siswa mencapai potensi akademis maksimal mereka melalui kurikulum adaptif.
+                    </p>
+                </div>
 
-    <!-- HERO -->
-    <section class="hero small">
-      <h1>Mobile App</h1>
-
-      <div class="phone-preview">
-        <div class="phone-screen">
-
-          <div class="app-header">MyApp</div>
-
-          <!-- 2 BOX SEJAJAR -->
-          <div class="app-grid">
-            
-            <!-- BOX 1 -->
-            <div class="app-box">
-              <img 
-                src="Assets/Home Page/Kisah Inspiratif Belva Devara Membangun Aplikasi Ruang Guru.jpg" 
-                alt="Ruang Guru"
-              />
-              <h3>Ruang Guru</h3>
-              <p>
-                Ruangguru adalah platform pendidikan berbasis teknologi (edtech) di Indonesia 
-                yang menyediakan layanan belajar online untuk siswa SD hingga SMA.
-              </p>
+                <!-- BOX 2: Google Classroom -->
+                <div class="app-box">
+                    <!-- Placeholder untuk Google Classroom -->
+                    <img 
+                        src="Assets/Home Page/google-classroom-clases-virtaules-peru.jpg" 
+                        alt="Classroom"
+                    />
+                    <h3>Google Classroom</h3>
+                    <p>
+                        Google Classroom adalah platform pembelajaran digital gratis yang dirancang untuk membantu 
+                        guru dan siswa mengelola proses belajar mengajar secara efisien. 
+                        Fitur utamanya meliputi pembuatan dan pengumpulan tugas secara online, 
+                        berbagi materi pelajaran dengan mudah, serta memfasilitasi komunikasi yang terstruktur. 
+                        Ini adalah alat yang sempurna untuk integrasi teknologi di lingkungan sekolah.
+                    </p>
+                </div>
+                
             </div>
+        </section>
 
-            <!-- BOX 2 -->
-            <div class="app-box">
-              <img 
-                src="Assets/Home Page/google-classroom-clases-virtaules-peru.jpg" 
-                alt="Classroom"
-              />
-              <h3>Google Classroom</h3>
-              <p>
-                Google Classroom adalah platform pembelajaran digital untuk mengelola 
-                proses belajar, berbagi materi, dan mengumpulkan tugas secara online.
-              </p>
-            </div>
+        <!-- FEATURES SECTION -->
+        <section class="features">
+            <h2>Fitur Mobile</h2>
+            <ul class="feature-list">
+                <li>Pembelajaran Interaktif dan Live Class</li>
+                <li>Bank Soal dan Kuis Adaptif</li>
+                <li>Pelacakan Progres Belajar Real-time</li>
+                <li>Akses Materi di Mana Saja (Offline Mode)</li>
+                <li>Forum Diskusi dan Bantuan Tutor Online</li>
+                <li>Integrasi dengan Kalender Akademik Sekolah</li>
+            </ul>
+        </section>
 
-          </div>
+    </div>
 
-        </div>
-      </div>
-
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features">
-      <h2>Fitur Mobile</h2>
-      <ul class="feature-list">
-
-      </ul>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>©️ <span class="year">2025</span> StuTIcs — Mobile App</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>©️ 2025 StuTIcs — Mobile App</p>
+    </footer>
 
 </body>
 </html>

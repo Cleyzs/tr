@@ -2,330 +2,311 @@
    RESET & GLOBAL
 ---------------------------------------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
 }
 
 body {
-  background: #f7f5ff;
-  overflow-x: hidden;
-  position: relative;
-  min-height: 100vh;
-
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
+    background: #cab5f7;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    
+    /* Apply custom fade-in animation to body */
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 .container {
-  width: 85%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 0;
+    width: 90%; 
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 600;
+    font-weight: 700;
+    color: #1f2937; /* Gray-900 */
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ----------------------------------------------------
    HEADER
 ---------------------------------------------------- */
 .site-header {
-  width: 100%;
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mobile adjustment for padding */
+@media (max-width: 768px) {
+    .site-header { padding: 16px 20px; }
 }
 
 .brand {
-  font-size: 1.7rem;
-  font-weight: 700;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #1f2937;
+}
+.brand span {
+    color: #4a00ff; /* Primary color */
+}
+
+.site-nav {
+    display: flex;
+    gap: 12px;
+}
+
+/* Hide nav on mobile */
+@media (max-width: 768px) {
+    .site-nav {
+        display: none;
+    }
 }
 
 .site-nav a {
-  margin-left: 18px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 6px;
+    text-decoration: none;
+    color: #4b5563; /* Gray-600 */
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.site-nav a:hover:not(.active) {
+    color: #4a00ff;
 }
 
 .site-nav a.active {
-  background: #4a00ff;
-  color: white;
+    background: #4a00ff;
+    color: white;
+    padding: 8px 16px;
+    box-shadow: 0 4px 6px rgba(74, 0, 255, 0.2);
 }
 
 /* ----------------------------------------------------
-   WEB DESIGNING BACKGROUND (UNGU GRADASI PUTIH)
+   MOBILE APP BACKGROUND (BLOBS)
 ---------------------------------------------------- */
-.page-web .bg-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  z-index: -1;
+.blob-bg {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(75px);
+    z-index: -10;
 }
 
-.page-web .bg1 {
-  width: 350px;
-  height: 350px;
-  background: #a47cff;
-  top: -80px;
-  left: -60px;
+.mob1 {
+    width: 300px;
+    height: 300px;
+    background-color: #e4c4ff;
+    top: -70px;
+    left: -50px;
+    animation: floatBlob 10s ease-in-out infinite;
 }
 
-.page-web .bg2 {
-  width: 300px;
-  height: 300px;
-  background: #d8c9ff;
-  top: 150px;
-  right: -40px;
+.mob2 {
+    width: 250px;
+    height: 250px;
+    background-color: #ffd8f6;
+    top: 180px;
+    right: -30px;
+    animation: floatBlob 11s ease-in-out infinite 0.4s;
 }
 
-.page-web .bg3 {
-  width: 250px;
-  height: 250px;
-  background: #c7b2ff;
-  bottom: -50px;
-  left: 120px;
-}
-
-/* ----------------------------------------------------
-   MOBILE APP BACKGROUND (UNGU PINK SOFT)
----------------------------------------------------- */
-.page-mobileapp .mob1,
-.page-mobileapp .mob2,
-.page-mobileapp .mob3 {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(55px);
-  z-index: -1;
-}
-
-.page-mobileapp .mob1 {
-  width: 300px;
-  height: 300px;
-  background: #e4c4ff;
-  top: -70px;
-  left: -50px;
-}
-
-.page-mobileapp .mob2 {
-  width: 250px;
-  height: 250px;
-  background: #ffd8f6;
-  top: 180px;
-  right: -30px;
-}
-
-.page-mobileapp .mob3 {
-  width: 210px;
-  height: 210px;
-  background: #f2d7ff;
-  bottom: -40px;
-  left: 140px;
+.mob3 {
+    width: 210px;
+    height: 210px;
+    background-color: #f2d7ff;
+    bottom: -40px;
+    left: 140px;
+    animation: floatBlob 12s ease-in-out infinite 0.9s;
 }
 
 /* ----------------------------------------------------
-   HERO
+   HERO SECTION
 ---------------------------------------------------- */
 .hero {
-  margin-top: 40px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px; /* Reduced padding bottom */
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+/* Responsive H1 */
+@media (min-width: 640px) {
+    .hero h1 { font-size: 3.5rem; }
+}
+@media (min-width: 1024px) {
+    .hero h1 { font-size: 4rem; }
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 32px auto;
+    font-size: 1.125rem;
+    color: #4b5563; /* Gray-600 */
 }
 
 /* ----------------------------------------------------
-   CARDS WEB DESIGN
+   FEATURE APP GRID (Wide Layout)
 ---------------------------------------------------- */
-.hero-cards {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+.feature-apps {
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
-.card {
-  flex: 1;
-  min-width: 250px;
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-  transition: 0.25s ease-out;
+.app-grid {
+    display: flex;
+    flex-direction: column; /* Default: stack vertically on mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Spasi antar kartu */
+    margin-top: 20px;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 22px rgba(110, 0, 255, 0.22);
+/* Desktop/Tablet: side-by-side */
+@media (min-width: 768px) {
+    .app-grid {
+        flex-direction: row;
+        gap: 40px; 
+    }
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+.app-box {
+    width: 100%;
+    max-width: 450px; /* Lebar maksimum kartu agar tidak terlalu lebar di desktop */
+    background: white;
+    padding: 30px; /* Padding besar */
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10); 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Tinggi otomatis */
 }
+
+.app-box:hover {
+    transform: translateY(-5px); /* Efek naik */
+    box-shadow: 0 15px 30px rgba(110,0,255,0.25); /* Shadow dengan hint warna primer */
+}
+
+.app-box img {
+    width: 100%;
+    height: 180px; /* Gambar lebih besar */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+.app-box h3 {
+    font-size: 1.5rem; 
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #4a00ff; /* Warna primer untuk judul */
+}
+
+.app-box p {
+    font-size: 1rem; 
+    text-align: center; /* Teks di tengah */
+    line-height: 1.6;
+    color: #4b5563;
+    height: auto; /* Hapus batasan tinggi */
+    overflow: visible;
+}
+
+/* Styling khusus untuk image placeholder (tetap dipertahankan) */
+.app-box img[alt="Ruang Guru"] {
+    background-color: #c084fc; 
+}
+.app-box img[alt="Classroom"] {
+    background-color: #8b5cf6; 
+}
+
 
 /* ----------------------------------------------------
-   PROJECT GRID
+   FEATURES SECTION
 ---------------------------------------------------- */
-.projects {
-  margin-top: 60px;
+.features {
+    padding-top: 50px;
+    padding-bottom: 40px;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #4a00ff; /* Primary color for section title */
 }
 
-.project {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.25s ease-out;
+.feature-list {
+    max-width: 650px;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 15px;
 }
 
-.project:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 22px rgba(110, 0, 255, 0.22);
+@media (min-width: 640px) {
+    .feature-list {
+         grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.thumb {
-  width: 60px;
-  height: 60px;
-  margin: auto;
-  background: #4a00ff;
-  color: white;
-  font-size: 1.4rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin-bottom: 12px;
+.feature-list li {
+    background: white;
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 600;
+    border-left: 5px solid #4a00ff;
+    transition: all 0.3s ease;
 }
-
-/* ----------------------------------------------------
-   MOBILE APP — PHONE PREVIEW
----------------------------------------------------- */
-.phone-preview {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-.phone-screen {
-  width: 260px;
-  background: white;
-  border-radius: 25px;
-  padding: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  
-  transform: scale(0.85);
-  opacity: 0;
-  animation: phoneIn 0.8s ease-out forwards;
-  animation-delay: 0.4s;
-}
-
-.phone-screen img {
-  width: 100%;
-  border-radius: 12px;
-  margin: 10px 0;
-}
-
-.app-header {
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.app-cards {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.app-card {
-  flex: 1;
-  background: #ffe0f5;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: 500;
-  transition: 0.25s;
-}
-
-.app-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(255, 130, 240, 0.25);
+.feature-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(74, 0, 255, 0.1);
 }
 
 /* ----------------------------------------------------
    FOOTER
 ---------------------------------------------------- */
 .site-footer {
-  text-align: center;
-  padding: 25px 0 40px;
-  margin-top: 40px;
-  font-size: 0.9rem;
+    text-align: center;
+    padding: 32px 0;
+    margin-top: 48px;
+    font-size: 0.9rem;
+    border-top: 1px solid #e5e7eb; 
+}
+.site-footer a {
+    color: #4a00ff;
+}
+.site-footer a:hover {
+    text-decoration: underline;
 }
 
 /* ----------------------------------------------------
-   ANIMATION KEYFRAMES
+   ANIMATIONS
 ---------------------------------------------------- */
-
-/* Fade-in global */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Floating blobs */
 @keyframes floatBlob {
-  0%   { transform: translateY(0) scale(1); }
-  50%  { transform: translateY(-35px) scale(1.05); }
-  100% { transform: translateY(0) scale(1); }
-}
-
-.bg-shape,
-.mob1, .mob2, .mob3,
-.page-web .bg1, .page-web .bg2, .page-web .bg3 {
-  animation: floatBlob 10s ease-in-out infinite;
-}
-
-.page-web .bg2,
-.page-mobileapp .mob2 { animation-duration: 11s; animation-delay: .4s; }
-
-.page-web .bg3,
-.page-mobileapp .mob3 { animation-duration: 12s; animation-delay: .9s; }
-
-/* Phone zoom */
-@keyframes phoneIn {
-  from { transform: scale(0.8) translateY(20px); opacity: 0; }
-  to   { transform: scale(1) translateY(0); opacity: 1; }
-}
-
-/* ----------------------------------------------------
-   RESPONSIVE
----------------------------------------------------- */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .site-header {
-    padding: 16px 20px;
-  }
-
-  .site-nav a {
-    margin-left: 10px;
-  }
+    0%  { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-35px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); }
 }
