@@ -276,7 +276,7 @@ body {
     }
 
     .learning-wrapper {
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 280px 1fr;
         gap: 25px;
         margin: 40px auto;
     }
@@ -298,123 +298,241 @@ body {
     }
 }
 
-/* Tablet Portrait (768px and below) */
+/* Tablet Portrait (768px and below) - IMPROVED */
 @media (max-width: 768px) {
-    /* Navbar: Tetap Scrollable Horizontal untuk tablet (768px) */
+    /* Navbar dengan menu vertikal */
     .navbar {
-        grid-template-columns: auto 1fr auto;
-        padding: 10px 15px;
-        gap: 10px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        padding: 12px 16px;
+        gap: 0;
+        row-gap: 12px;
+    }
+
+    .nav-left {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .nav-logo {
-        height: 36px;
+        height: 38px;
     }
 
+    /* Profile di kanan atas */
+    .nav-right {
+        grid-column: 2;
+        grid-row: 1;
+        gap: 12px;
+        justify-content: flex-end;
+    }
+
+    .avatar-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Menu items di baris kedua - VERTICAL LAYOUT */
     .nav-center {
-        gap: 10px;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
-        overflow-x: auto; /* Membiarkan scroll untuk 768px */
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        padding-right: 15px;
-    }
-
-    .nav-center::-webkit-scrollbar {
-        display: none;
+        gap: 10px;
+        padding: 12px 0 0 0;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        overflow-x: visible;
     }
 
     .nav-item {
         font-size: 14px;
-        padding: 6px 10px;
+        padding: 7px 14px;
+        flex-shrink: 0;
     }
 
-    .avatar-img {
-        width: 36px;
-        height: 36px;
-    }
-
-    /* Learning Path */
+    /* Learning Path - IMPROVED LAYOUT */
     .learning-wrapper {
         grid-template-columns: 1fr;
-        gap: 25px;
-        margin: 30px auto;
-        padding: 15px;
+        gap: 30px;
+        margin: 35px auto;
+        padding: 18px;
+        max-width: 680px; /* Optimal reading width */
     }
 
-    .learning-steps {
-        order: 2;
-        gap: 12px;
-    }
-
+    /* Detail box comes first for better UX */
     .detail-box {
         order: 1;
-        padding: 20px;
+        padding: 24px;
+    }
+
+    .detail-title {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .detail-text {
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 20px;
+    }
+
+    /* Steps cards shown below */
+    .learning-steps {
+        order: 2;
+        gap: 14px;
     }
 
     .step-card {
-        padding: 14px;
+        padding: 16px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .step-title {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .step-desc {
-        font-size: 13px;
-        margin-top: 6px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
     .start-btn {
         width: 100%;
         text-align: center;
+        padding: 13px 24px;
+        font-size: 16px;
     }
 }
 
-/* Mobile (480px and below) */
+/* Mobile (480px and below) - COMPLETELY REDESIGNED */
 @media (max-width: 480px) {
-    /* Perbaikan Navbar: MENU STACKED VERTICAL di 480px ke bawah */
+    /* Navbar - Stacked Layout */
     .navbar {
-        /* Mengubah ke layout vertikal agar menu turun ke bawah */
-        grid-template-columns: 1fr auto; /* Hanya logo & profile di baris 1 */
-        grid-template-rows: auto auto; /* Membuat baris kedua untuk menu */
-        padding: 8px 10px;
-        gap: 0; /* Menghilangkan gap di navbar utama */
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        padding: 10px 12px;
+        gap: 0;
+        row-gap: 10px;
     }
 
     .nav-left {
-        padding-left: 0;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .nav-logo {
-        height: 32px;
+        height: 34px;
     }
 
+    /* Profile on top right */
+    .nav-right {
+        grid-column: 2;
+        grid-row: 1;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+
+    .avatar-img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .arrow {
+        font-size: 12px;
+    }
+
+    /* Menu items on second row - FULL WIDTH */
     .nav-center {
-        /* Memastikan menu mengambil baris kedua dan lebar penuh */
-        grid-column: 1 / 3; 
-        grid-row: 2; 
+        grid-column: 1 / -1;
+        grid-row: 2;
         display: flex;
-        flex-wrap: wrap; /* Membungkus item ke bawah jika penuh */
+        flex-wrap: wrap;
         justify-content: flex-start;
         gap: 8px;
-        
-        /* Menghilangkan scroll horizontal */
-        overflow-x: visible; 
-        padding: 10px 0 0 0; /* Padding di atas untuk memisahkan dari baris 1 */
-        border-top: 1px solid #eee;
-        margin-top: 8px;
-    }
-    
-    .nav-item {
-        font-size: 12px;
-        padding: 5px 8px;
+        padding: 10px 0 0 0;
+        border-top: 1px solid rgba(0,0,0,0.08);
+        overflow-x: visible;
     }
 
-    .nav-right {
-        gap: 10px;
-        grid-column: 2; /* Memastikan profile tetap di baris 1, kolom 2 */
-        grid-row: 1;
+    .nav-item {
+        font-size: 13px;
+        padding: 6px 11px;
+        flex-shrink: 0;
+    }
+
+    /* Learning Path - Mobile Optimized */
+    .learning-wrapper {
+        margin: 25px auto;
+        padding: 12px;
+        gap: 24px;
+        max-width: 100%;
+    }
+
+    .detail-box {
+        padding: 20px 18px;
+        border-radius: 14px;
+    }
+
+    .detail-title {
+        font-size: 21px;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+
+    .detail-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .learning-steps {
+        gap: 12px;
+    }
+
+    .step-card {
+        padding: 14px 16px;
+        border-radius: 14px;
+    }
+
+    .step-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .step-desc {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-top: 6px;
+    }
+
+    .start-btn {
+        padding: 13px 22px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+
+    /* Dropdown adjustments */
+    .dropdown-menu {
+        width: 140px;
+        right: -8px; /* Better alignment on mobile */
+    }
+
+    .dropdown-menu li {
+        padding: 9px 14px;
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile (360px and below) - REFINED */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .nav-logo {
+        height: 30px;
     }
 
     .avatar-img {
@@ -422,11 +540,17 @@ body {
         height: 32px;
     }
 
-    .arrow {
-        font-size: 12px;
+    .nav-center {
+        gap: 6px;
+        padding-top: 8px;
     }
 
-    /* Learning Path */
+    .nav-item {
+        font-size: 12px;
+        padding: 5px 9px;
+        border-radius: 10px;
+    }
+
     .learning-wrapper {
         margin: 20px auto;
         padding: 10px;
@@ -434,11 +558,23 @@ body {
     }
 
     .detail-box {
-        padding: 18px;
+        padding: 16px 14px;
+        border-radius: 12px;
+    }
+
+    .detail-title {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .detail-text {
+        font-size: 13px;
+        margin-bottom: 16px;
     }
 
     .step-card {
-        padding: 12px;
+        padding: 12px 14px;
+        border-radius: 12px;
     }
 
     .step-title {
@@ -447,11 +583,12 @@ body {
 
     .step-desc {
         font-size: 12px;
+        line-height: 1.5;
     }
 
     .start-btn {
-        padding: 12px 20px;
-        font-size: 15px;
+        padding: 11px 18px;
+        font-size: 14px;
     }
 
     .dropdown-menu {
@@ -460,38 +597,6 @@ body {
 
     .dropdown-menu li {
         padding: 8px 12px;
-    }
-}
-
-/* Extra Small Mobile (360px and below) */
-@media (max-width: 360px) {
-    .nav-item {
-        font-size: 11px;
-        padding: 4px 6px;
-    }
-
-    .nav-center {
-        gap: 5px;
-    }
-
-    .detail-box {
-        padding: 15px;
-    }
-
-    .step-card {
-        padding: 10px;
-    }
-
-    .step-title {
-        font-size: 14px;
-    }
-
-    .step-desc {
-        font-size: 11px;
-    }
-
-    .start-btn {
-        padding: 10px 16px;
-        font-size: 14px;
+        font-size: 13px;
     }
 }
