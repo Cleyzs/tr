@@ -24,7 +24,28 @@
 
   --font-heading: 'Helios Extended', sans-serif;
   --font-body: 'Garet', Arial, sans-serif;
+
 }
+
+/* Headings & strong title elements */
+h1, h2, h3, h4,
+.title-gradient,
+.card-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Paragraphs & smaller text */
+p,
+.card-desc,
+.meta .time,
+.panel .list li,
+.sidebar,
+.content {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
 
 /* ---------- Reset & base ---------- */
 *{ box-sizing:border-box; 
@@ -250,10 +271,6 @@ body{
 .search::placeholder{ color:#8c79aa; 
     font-weight:700; 
 }
-.search-ico{ position:absolute; 
-    right:12px; top:50%; 
-    transform:translateY(-50%); opacity:.85; 
-}
 
 .select-mod{
     padding:10px 12px;
@@ -265,13 +282,12 @@ body{
 }
 
 .controls {
-    margin-top: 90px;
+    margin-top: 100px;
 }
 
 body {
-    padding-top: 50px; /* jarak untuk memperbaiki navbar dan controls */
+    padding-top: 80px; /* jarak untuk memperbaiki navbar dan controls */
 }
-
 
 .filter{ 
     padding:10px 14px; 
@@ -281,9 +297,6 @@ body {
     background: linear-gradient(90deg,var(--purple-1),var(--purple-2));
 }
 
-
-
-/* FIX TYPO */
 .search-icon{
     position:absolute;
     right:12px;
@@ -558,20 +571,6 @@ backdrop-filter: blur(6px);
     z-index: 999;
 }
 
-/* dark-mode tweaks for readability */
-#themeDark:checked ~ .controls .search{ background:#0f1020; color:#eaf0ff; border-color: rgba(255,255,255,0.06); }
-#themeDark:checked ~ .layout .card .card-title{ color:#eaf0ff; }
-#themeDark:checked ~ .layout .card .meta .user{ color:#eaf0ff; }
-
-/* responsive */
-@media (max-width:1000px){
-  .layout{ flex-direction:column; padding:12px; }
-  .sidebar{ width:100%; order:2; }
-  .content{ order:1; }
-  .nav-center{ display:none; }
-  .search{ width:100%; }
-}
-
 /* =============================
    ANIMATIONS
 ============================= */
@@ -583,146 +582,6 @@ backdrop-filter: blur(6px);
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==== GLOBAL FONTS ==== */
-:root{
-  --font-heading: 'Helios Extended', sans-serif;
-  --font-body: 'Garet', Arial, sans-serif;
-}
-
-/* Headings & strong title elements */
-h1, h2, h3, h4,
-.title-gradient,
-.card-title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-}
-
-/* Paragraphs & smaller text */
-p,
-.card-desc,
-.meta .time,
-.panel .list li,
-.sidebar,
-.content {
-  font-family: var(--font-body);
-  font-weight: 500;
-}
-
-/* ============================================
-   RESPONSIVE – LAPTOP / TABLET LANDSCAPE (≤1024px)
-============================================ */
-@media (max-width: 1024px) {
-    .topbar {
-        padding: 15px 25px;
-    }
-
-    .logo span {
-        font-size: 28px;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    .card {
-        padding: 25px;
-    }
-}
-
-
-/* ============================================
-   RESPONSIVE – TABLET / HP LEBAR (≤768px / 700px)
-============================================ */
-@media (max-width: 768px) {
-    .topbar {
-        padding: 12px 20px;
-    }
-
-    .logo span {
-        font-size: 24px;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    .card {
-        padding: 22px;
-        gap: 15px;
-    }
-
-    label {
-        font-size: 14px;
-    }
-
-    select, input, textarea {
-        padding: 10px 12px;
-        font-size: 13.5px;
-    }
-
-    textarea {
-        height: 110px;
-    }
-
-    .submit-btn {
-        font-size: 15px;
-        padding: 12px;
-    }
-}
-
-
-/* ============================================
-   RESPONSIVE – HP KECIL (≤480px / 400px)
-============================================ */
-@media (max-width: 480px) {
-
-    .topbar {
-        padding: 10px 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo span {
-        font-size: 20px;
-    }
-
-    .exit-btn {
-        width: 40px;
-        height: 22px;
-    }
-
-    .container {
-        width: 95%;
-    }
-
-    .card {
-        padding: 18px;
-        border-radius: 16px;
-        gap: 14px;
-    }
-
-    label {
-        font-size: 13px;
-    }
-
-    select, input, textarea {
-        padding: 9px 10px;
-        font-size: 13px;
-        border-radius: 10px;
-    }
-
-    textarea {
-        height: 100px;
-    }
-
-    .submit-btn {
-        padding: 12px;
-        font-size: 14px;
-        border-radius: 12px;
-    }
 }
 
 /* ================= FOOTER ================= */
@@ -871,22 +730,6 @@ p,
     color: #fff;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .footer {
-        padding: 50px 30px;
-        flex-direction: column;
-    }
-
-    .footer-center {
-        gap: 40px;
-    }
-
-    .footer-bottom {
-        padding: 15px 30px;
-    }
-}
-
 /* Kolom Contact Us (icon berjajar) */
 .footer-contact .social-icons {
     display: flex;
@@ -928,4 +771,223 @@ p,
 
 .bottom-connect .connect-text:hover {
     opacity: 0.8;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES 🔥 (Dibuat Ulang)
+========================================= */
+
+/* --- 1. LAYAR TABLET HORIZONTAL / DESKTOP KECIL (Maks 1024px) --- */
+@media (max-width: 1024px) {
+    /* Navbar masih 1 baris, padding-top default (80px) cukup */
+    
+    /* Layout Utama */
+    .layout {
+        gap: 20px;
+        padding: 12px 20px 60px;
+    }
+
+    /* Sidebar - Ubah lebar */
+    .sidebar {
+        width: 260px;
+    }
+
+    /* Navbar */
+    .nav-center {
+        gap: 20px;
+    }
+    .nav-item {
+        font-size: 16px;
+    }
+    .nav-right {
+        padding-right: 20px;
+    }
+
+    /* Controls */
+    .controls {
+        /* Margin-top 0 karena offset di-handle body padding-top default */
+        margin-top: 0; 
+        padding: 12px 18px;
+        justify-content: space-between;
+    }
+    .search {
+        width: 300px;
+    }
+
+    /* FAB */
+    .fab {
+        left: auto;
+        right: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 50px;
+    }
+    .footer-center {
+        gap: 50px;
+    }
+}
+
+
+/* --- 2. LAYAR TABLET VERTIKAL (Maks 768px) --- */
+@media (max-width: 768px) {
+    /* 🔥 FIX: Sesuaikan padding-top body untuk navbar 2 baris (sekitar 120px) */
+    body {
+        padding-top: 110px; 
+    }
+
+    /* 🔥 NAVBAR - DIUBAH MENJADI DUA BARIS */
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Tumpuk secara vertikal */
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    /* Baris Atas (Logo & Avatar) */
+    .nav-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Logo di kiri, Avatar di kanan */
+        align-items: center;
+    }
+
+    .nav-right {
+        padding-right: 0;
+        margin-left: auto; 
+    }
+
+    /* Menu Center - Baris Kedua */
+    .nav-center {
+        display: flex; 
+        justify-content: flex-start; 
+        flex-wrap: wrap; 
+        gap: 10px; 
+        margin: 10px 0 0 0; 
+        width: 100%; 
+    }
+    
+    /* Layout Utama - Stack Sidebar & Content */
+    .layout {
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 18px 60px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%; 
+        margin-bottom: 20px;
+        box-shadow: none; 
+    }
+    
+    /* Controls */
+    .controls {
+        /* 🔥 FIX: margin-top harus 0 */
+        margin-top: 0; 
+        padding: 12px 18px;
+        justify-content: space-between;
+    }
+    .search-wrap {
+        width: 100%;
+        order: -1; 
+        margin-bottom: 10px;
+    }
+    .search {
+        width: 100%; 
+    }
+
+    /* Title */
+    .title-gradient {
+        font-size: 28px;
+    }
+    
+    /* Footer */
+    .footer {
+        flex-direction: column; 
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    .footer-center {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    .bottom-connect {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+
+/* --- 3. LAYAR MOBILE (Maks 480px) --- */
+@media (max-width: 480px) {
+    
+    /* 🔥 FIX: Sesuaikan padding-top untuk navbar 2 baris mobile (sekitar 105px) */
+    body {
+        padding-top: 120px; 
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 10px 15px;
+    }
+    .nav-logo {
+        height: 40px;
+    }
+    
+    /* Controls */
+    .controls {
+        /* 🔥 FIX: Pastikan margin-top 0 */
+        margin-top: 0; 
+        padding: 10px 15px;
+    }
+    .search {
+        padding: 10px 40px 10px 14px; 
+    }
+    .select-mod, .filter, .btn-create {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    /* Layout */
+    .layout {
+        padding: 10px 15px 50px;
+    }
+    
+    /* Title */
+    .title-gradient {
+        font-size: 24px;
+    }
+
+    /* Card */
+    .card-title {
+        font-size: 18px;
+    }
+    .card-top {
+        gap: 8px;
+    }
+    .avatar {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 15px;
+    }
+    .footer-bottom {
+        padding: 15px 15px;
+        font-size: 12px;
+    }
+}
+
+.controls {
+    margin-top: 120px !important;
 }
