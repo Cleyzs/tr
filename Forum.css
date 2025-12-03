@@ -13,9 +13,6 @@
   --panel-purple: #efe6ff;   /* sidebar panels (distinct) */
   --panel-contrast: #f6efff;
 
-  --text-dark: #0b1220;
-  --muted: #6b7280;
-  --radius: 14px;
 
   --shadow-soft: 0 12px 30px rgba(12,18,40,0.08);
   --shadow-strong: 0 30px 80px rgba(12,18,40,0.12);
