@@ -252,7 +252,8 @@ body{
 }
 
 /* ---------- CONTROLS ---------- */
-.controls{ display:flex; 
+.controls{ 
+    display:flex; 
     gap:14px; padding:16px 28px; 
     align-items:center;
     flex-wrap:wrap; 
