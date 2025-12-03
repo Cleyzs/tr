@@ -554,23 +554,6 @@ backdrop-filter: blur(6px);
     font-weight:800; 
 }
 
-/* FAB */
-.fab{ position:sticky;
-    left: 1270px;
-    right:20px; 
-    bottom:22px;
-    width:56px;
-    height:56px; 
-    border-radius:12px; 
-    display:grid; 
-    place-items:center; 
-    color:#fff; 
-    background: linear-gradient(90deg,var(--purple-1),var(--purple-2)); 
-    box-shadow: 0 18px 60px rgba(122,64,255,0.14);
-    text-decoration:none;
-    z-index: 999;
-}
-
 /* =============================
    ANIMATIONS
 ============================= */
@@ -814,11 +797,7 @@ backdrop-filter: blur(6px);
         width: 300px;
     }
 
-    /* FAB */
-    .fab {
-        left: auto;
-        right: 20px;
-    }
+
 
     /* Footer */
     .footer {
