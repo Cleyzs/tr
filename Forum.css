@@ -837,35 +837,61 @@ backdrop-filter: blur(6px);
         padding-top: 110px; 
     }
 
-    /* 🔥 NAVBAR - DIUBAH MENJADI DUA BARIS */
     .navbar {
         display: flex;
-        flex-direction: column; /* Tumpuk secara vertikal */
-        align-items: flex-start;
-        padding: 10px 15px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        background: white;
     }
 
-    /* Baris Atas (Logo & Avatar) */
-    .nav-left {
-        width: 100%;
+    .nav-left, .nav-center, .nav-right {
         display: flex;
-        justify-content: space-between; /* Logo di kiri, Avatar di kanan */
         align-items: center;
     }
 
-    .nav-right {
-        padding-right: 0;
-        margin-left: auto; 
+    /* Logo kiri */
+    .nav-left {
+        flex: 1;
     }
 
-    /* Menu Center - Baris Kedua */
+    .nav-logo {
+        width: 65px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    /* Menu tengah diperkecil */
     .nav-center {
-        display: flex; 
-        justify-content: flex-start; 
-        flex-wrap: wrap; 
-        gap: 10px; 
-        margin: 10px 0 0 0; 
-        width: 100%; 
+        flex: 2;
+        justify-content: center;
+        gap: 10px;          /* jarak antar menu lebih rapat */
+        white-space: nowrap;
+    }
+
+    .nav-item {
+        font-size: 12px;  /* lebih kecil */
+        font-weight: 600;
+        padding: 3px 6px;   /* padding diperkecil */
+        margin-left: 5px;
+    }
+
+    /* Right side */
+    .nav-right {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .avatar-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    .arrow {
+        font-size: 11px;
+        margin-left: 3px;
     }
     
     /* Layout Utama - Stack Sidebar & Content */
