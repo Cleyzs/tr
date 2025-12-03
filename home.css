@@ -823,33 +823,62 @@ body {
 /* ================== MOBILE 768px ================== */
 @media (max-width: 768px) {
 
-    /* ================= NAVBAR ================= */
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 15px;
+.navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        background: white;
     }
 
-    .nav-center {
+    .nav-left, .nav-center, .nav-right {
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /* Logo kiri */
+    .nav-left {
+        flex: 1;
+    }
+
+    .nav-logo {
+        width: 65px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    /* Menu tengah diperkecil */
+    .nav-center {
+        flex: 2;
         justify-content: center;
-        gap: 12px;
+        gap: 10px;          /* jarak antar menu lebih rapat */
+        white-space: nowrap;
     }
 
     .nav-item {
-        font-size: 16px;
+        font-size: 11.5px;  /* lebih kecil */
+        font-weight: 600;
+        padding: 3px 6px;   /* padding diperkecil */
+        margin-left: 5px;
     }
 
+    /* Right side */
     .nav-right {
-        margin-top: 5px;
+        flex: 1;
+        justify-content: flex-end;
     }
 
     .avatar-img {
-        width: 38px;
-        height: 38px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
     }
 
+    .arrow {
+        font-size: 11px;
+        margin-left: 3px;
+    }
 
     /* ================= HERO ================= */
     .welcome-section {
